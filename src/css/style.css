@@ -33,6 +33,13 @@ body {
   visibility: hidden;
 }
 
+.nav__wrapper {
+  margin-block-start: 1rem;
+  margin-inline-start: 1rem;
+  margin-inline-end: 1rem;
+  z-index: 1;
+}
+
 .hamburger,
 .close-btn {
   display: none;
@@ -40,6 +47,7 @@ body {
   background: none;
   border: none;
   position: absolute;
+  cursor: pointer;
 }
 
 .hamburger {
@@ -63,21 +71,37 @@ body {
   display: none;
 }
 
-header{
+header {
   position: relative;
 }
 
-.test{
-  background-image: url("../assets/jpeg/calliTextrueMobile.jpg"); 
+.header__texture--back {
+  background-image: url("../assets/jpeg/calliTextrueMobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   mix-blend-mode: screen;
-  position:absolute;
+  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: -10;
+  width: 100vw;
+  height: 100vh;
+}
+
+.header__texture--front {
+  background-image: url("../assets/jpeg/leatherTextureMobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  mix-blend-mode: soft-light;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
 }
 
 .header__wrapper,
@@ -86,7 +110,7 @@ header{
   flex-direction: column;
 }
 
-.hero__wrapper{
+.hero__wrapper {
   align-items: center;
 }
 
@@ -123,7 +147,7 @@ header{
   align-items: center;
 }
 
-.accent__text{
+.accent__text {
   font-family: "Cormorant Garamond", serif;
   text-transform: capitalize;
   letter-spacing: 0.28125rem;
@@ -142,7 +166,7 @@ header{
   .hamburger {
     display: block;
     top: 1rem;
-    right: -.5rem;
+    right: 1rem;
   }
 
   .menu {
@@ -180,7 +204,6 @@ header{
 
   .menu.active .close-btn {
     display: block;
-    right: -.5rem;
   }
 
   .title__wrapper> :nth-child(1) {
@@ -199,6 +222,10 @@ header{
     order: 3;
     justify-self: center;
   }
+
+  .header__img {
+    margin-block-start: -10rem;
+  }
 }
 
 @media only screen and (min-width: 52em) {
@@ -206,8 +233,26 @@ header{
     content: "min-width: 52em";
   }
 
+  .hamburger {
+    display: none;
+  }
+
+  .menu{
+    display: block;
+    background-color: transparent;
+    position: static;
+  }
+
+  .menu__list{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+      gap: 3.4375rem;
+  }
+
   .title__wrapper> :nth-child(1) {
     order: 1;
+    font-size: 6.5625rem;
   }
 
   .title__wrapper> :nth-child(2) {
@@ -228,7 +273,11 @@ header{
   .hero__wrapper {
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    justify-content: center;
+  }
+
+  .header__img {
+    margin-block-start: 0rem;
   }
 }
 
