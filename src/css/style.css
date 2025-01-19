@@ -267,6 +267,10 @@ header {
     gap: 3.4375rem;
   }
 
+  span {
+    color: var(--fujiSnow);
+  }
+
   .title__wrapper> :nth-child(1) {
     order: 1;
     font-size: 6.5625rem;
@@ -274,10 +278,13 @@ header {
 
   .title__wrapper> :nth-child(2) {
     order: 2;
+    font-size: 12.5rem;
+    letter-spacing: -1.625rem;
   }
 
   .title__wrapper> :nth-child(3) {
     order: 3;
+    margin-block-start: -15rem;
   }
 
   .title__wrapper> :nth-child(4) {
@@ -285,21 +292,31 @@ header {
     justify-self: center;
     letter-spacing: 1.5rem;
     margin-inline-start: 0rem;
+    font-size: 17.8125rem;
+    margin-block-start: -14rem;
   }
 
   .hero__wrapper {
     display: flex;
-    flex-direction: row;
     justify-content: center;
   }
 
   .header__img {
     margin-block-start: 0rem;
   }
+
+  .accent__text {
+    font-size: 1.5625rem;
+    font-weight: 700;
+  }
 }
 
 @media only screen and (min-width: 90em) {
   .container::before {
     content: "min-width: 90em";
+  }
+
+  .hero__wrapper {
+   flex-direction: row;
   }
 }
