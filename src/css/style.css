@@ -23,6 +23,9 @@
   --ws-xl: clamp(3rem, 2.8696rem + 0.6522vw, 3.375rem);
   --ws-2xl: clamp(4rem, 3.8261rem + 0.8696vw, 4.5rem);
   --ws-3xl: clamp(6rem, 5.7391rem + 1.3043vw, 6.75rem);
+
+  --garamond: "Cormorant Garamond", serif;
+  --inter: "Inter", sans-serif;
 }
 
 body {
@@ -38,6 +41,10 @@ body {
   margin-inline-start: 1rem;
   margin-inline-end: 1rem;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3.5rem;
 }
 
 .hamburger,
@@ -60,6 +67,12 @@ body {
   right: 1.25rem;
   top: 1.25rem;
   color: black;
+}
+
+.menu__item {
+  font-family: var(--inter);
+  text-transform: capitalize;
+  width: fit-content;
 }
 
 .menu.active .close-btn {
@@ -115,7 +128,7 @@ header {
 }
 
 .title__wrapper> :nth-child(1) {
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--garamond);
   font-size: 4.6875rem;
   font-style: normal;
   font-weight: 700;
@@ -124,7 +137,7 @@ header {
 }
 
 .title__wrapper> :nth-child(2) {
-  font-family: "Inter", serif;
+  font-family: var(--inter);
   font-size: 5rem;
   font-style: normal;
   font-weight: 900;
@@ -133,7 +146,7 @@ header {
 }
 
 .title__wrapper> :nth-child(4) {
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--garamond);
   font-size: 12.8125rem;
   font-weight: 700;
   letter-spacing: -3rem;
@@ -148,9 +161,10 @@ header {
 }
 
 .accent__text {
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--garamond);
   text-transform: capitalize;
   letter-spacing: 0.28125rem;
+  font-size: 0.9rem;
 }
 
 @media only screen and (min-width: 23em) {
@@ -171,20 +185,20 @@ header {
 
   .menu {
     display: none;
-    position: fixed;
     top: 0;
     left: 0;
-    background-color: pink;
-    height: 100vb;
-    width: 100vi;
+    background-color: var(--fujiSnow);
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     z-index: 999;
-    padding-top: var(--ws-2xl-3xl);
   }
 
   .menu.active {
     display: flex;
+    position: fixed;
+    height: 100vb;
+    width: 100vi;
   }
 
   .menu__list {
@@ -237,17 +251,20 @@ header {
     display: none;
   }
 
-  .menu{
-    display: block;
-    background-color: transparent;
-    position: static;
+  .nav__wrapper {
+    justify-content: center;
   }
 
-  .menu__list{
+  .menu {
+    display: block;
+    background-color: transparent;
+  }
+
+  .menu__list {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-      gap: 3.4375rem;
+    gap: 3.4375rem;
   }
 
   .title__wrapper> :nth-child(1) {
