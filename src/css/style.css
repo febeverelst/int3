@@ -247,17 +247,8 @@ header {
     content: "min-width: 52em";
   }
 
-  .hamburger {
-    display: none;
-  }
-
   .nav__wrapper {
     justify-content: center;
-  }
-
-  .menu {
-    display: block;
-    background-color: transparent;
   }
 
   .menu__list {
@@ -311,6 +302,21 @@ header {
   }
 }
 
+@media only screen and (min-width: 75em) {
+  .container::before {
+    content: "min-width: 90em";
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+    background-color: transparent;
+  }
+}
+
 @media only screen and (min-width: 90em) {
   .container::before {
     content: "min-width: 90em";
@@ -320,13 +326,13 @@ header {
     flex-direction: row;
   }
 
-  .accent__text{
+  .accent__text {
     display: flex;
     flex-direction: column;
     width: 9rem;
   }
 
-  .right__word{
+  .right__word {
     text-align: right;
   }
 }
