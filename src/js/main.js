@@ -1,5 +1,8 @@
-const cardContainer = document.querySelector('.card__container');
+const flipcardContainers = document.querySelectorAll('.flipcard__container');
 
-cardContainer.addEventListener('click', () => {
-    cardContainer.querySelector('.card').classList.toggle('flipped');
+flipcardContainers.forEach(container => {
+    container.addEventListener('click', () => {
+        container.querySelector('.flipcard').classList.toggle('flipped');
+    });
 });
+
