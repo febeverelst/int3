@@ -37,7 +37,7 @@ body {
 }
 
 .nav__wrapper {
-  margin-block-start: 1rem;
+  margin-block-start: 1.5rem;
   margin-inline-start: 1rem;
   margin-inline-end: 1rem;
   z-index: 1;
@@ -73,6 +73,13 @@ body {
   font-family: var(--inter);
   text-transform: capitalize;
   width: fit-content;
+  padding: 1.5rem;
+  font-weight: 700;
+}
+
+.menu__item--special {
+  background-color: var(--rustyRed);
+  color: var(--fujiSnow);
 }
 
 .menu.active .close-btn {
@@ -99,8 +106,6 @@ header {
   left: 0;
   right: 0;
   z-index: -10;
-  width: 100vw;
-  height: 100vh;
 }
 
 .header__texture--front {
@@ -113,8 +118,6 @@ header {
   bottom: 0;
   left: 0;
   right: 0;
-  width: 100vw;
-  height: 100vh;
 }
 
 .header__wrapper,
@@ -165,6 +168,7 @@ header {
   text-transform: capitalize;
   letter-spacing: 0.28125rem;
   font-size: 0.9rem;
+  font-weight: 700;
 }
 
 @media only screen and (min-width: 23em) {
@@ -206,10 +210,6 @@ header {
     flex-direction: column;
     align-items: center;
     position: relative;
-    background-color: var(--LYNX_WHITE);
-    padding-inline-start: var(--ws-2xl);
-    padding-inline-end: var(--ws-2xl);
-    padding-block-end: var(--ws-2xs);
   }
 
   .close-btn {
@@ -267,18 +267,18 @@ header {
     gap: 3.4375rem;
   }
 
-  span {
+  .title__accent {
     color: var(--fujiSnow);
   }
 
   .title__wrapper> :nth-child(1) {
     order: 1;
-    font-size: 6.5625rem;
+    font-size: 6rem;
   }
 
   .title__wrapper> :nth-child(2) {
     order: 2;
-    font-size: 12.5rem;
+    font-size: 11rem;
     letter-spacing: -1.625rem;
   }
 
@@ -292,8 +292,8 @@ header {
     justify-self: center;
     letter-spacing: 1.5rem;
     margin-inline-start: 0rem;
-    font-size: 17.8125rem;
-    margin-block-start: -14rem;
+    font-size: 15rem;
+    margin-block-start: -12rem;
   }
 
   .hero__wrapper {
@@ -317,6 +317,16 @@ header {
   }
 
   .hero__wrapper {
-   flex-direction: row;
+    flex-direction: row;
+  }
+
+  .accent__text{
+    display: flex;
+    flex-direction: column;
+    width: 9rem;
+  }
+
+  .right__word{
+    text-align: right;
   }
 }
