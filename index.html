@@ -112,20 +112,22 @@
       </div>
     </div>
 
-    <section>
-      <div>
-        <div>
-          <picture>
-            <img sizes="(max-width: 400px) 100vw, 400px" srcset="
+    <section class="stacking__cards">
+      <!-- card 1 -->
+      <div class="card__block">
+        <div class="card__img--group">
+          <picture class="card__picture">
+            <img class="card__img" sizes="(max-width: 400px) 100vw, 400px" srcset="
                   src/assets/avif/gildedBook_bxf96p_c_scale,w_100.avif 100w,
                   src/assets/avif/gildedBook_bxf96p_c_scale,w_252.avif 252w,
                   src/assets/avif/gildedBook_bxf96p_c_scale,w_377.avif 377w,
                   src/assets/avif/gildedBook_bxf96p_c_scale,w_400.avif 400w"
               src="src/assets/avif/gildedBook_bxf96p_c_scale,w_400.avif" alt="">
           </picture>
-          <div>
-            <h3>careers gift</h3>
-            <p class="bodycopy">Being a bookbinder gave him great and important jobs. This made him a proud man. With
+          <div class="card__text">
+            <h3 class="card__title">careers gift</h3>
+            <p class="bodycopy card__bodycopy">Being a bookbinder gave him great and important jobs. This made him a
+              proud man. With
               his bookbinding
               skills he was
               assigned to bind a book with gilded leather, a very expensive and valuable material. Requested by the King
@@ -134,29 +136,31 @@
           </div>
         </div>
       </div>
+      <!-- card 2 -->
       <div>
         <p>Click me!</p>
         <div class="flipcard__container">
           <div class="flipcard">
             <div class="flipcard__front">
-              <img src="src/assets/jpeg/flipcardFront_mobile.jpg" alt="flipcard front texture">
+              <img class="flipcard__image" src="src/assets/jpeg/flipcardFront_mobile.jpg" alt="flipcard front texture">
             </div>
             <div class="flipcard__back">
-              <div>
-                <h3>What would you do?</h3>
-                <div>
-                  <button>Deliver Secretly</button>
-                  <button>Deliver Proudly</button>
+              <div class="flipcard__content">
+                <h3 class="flipcard__title">What would you do?</h3>
+                <div class="flipcard__actions">
+                  <button class="flipcard__button">Deliver Secretly</button>
+                  <button class="flipcard__button">Deliver Proudly</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div>
-        <div>
-          <h3>Approaching Merchants</h3>
-          <p class="bodycopy">Walking the streets with the book was risky. Along the way, merchants stopped Plantin,
+      <!-- card 3 -->
+      <div class="card__block">
+        <div class="card__text">
+          <h3 class="card__title">Approaching Merchants</h3>
+          <p class="bodycopy card__bodycopy">Walking the streets with the book was risky. Along the way, merchants stopped Plantin,
             their charms
             sparking a
             conversation. Aware of their intentions, Plantin tried to hurry on, but the merchants approached
@@ -164,25 +168,27 @@
             decision.</p>
         </div>
       </div>
+      <!-- card 4 -->
       <div>
         <p>Click me!</p>
         <div class="flipcard__container">
           <div class="flipcard">
             <div class="flipcard__front">
-              <img src="src/assets/jpeg/flipcardFront_mobile.jpg" alt="flipcard front texture">
+              <img class="flipcard__image" src="src/assets/jpeg/flipcardFront_mobile.jpg" alt="flipcard front texture">
             </div>
             <div class="flipcard__back">
-              <div>
-                <h3>How will you react?</h3>
-                <div>
-                  <button>Ignore Them</button>
-                  <button>Let them talk</button>
+              <div class="flipcard__content">
+                <h3 class="flipcard__title">How will you react?</h3>
+                <div class="flipcard__actions">
+                  <button class="flipcard__button">Ignore Them</button>
+                  <button class="flipcard__button">Let them talk</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      
       <!-- this is for the background & ornamenttexture -->
       <div>
         <!-- this is the div-title -->
@@ -351,7 +357,7 @@
       </div>
       <button>Read more</button>
     </section>
-    
+
     <!-- the devider -->
     <div class="divider">
       <div class="divider__group">
@@ -437,7 +443,8 @@
             the Moretus family. Follow their journey of innovation and craftsmanship, and uncover the legacy of printing
             at the
             Plantin-Moretus Museum in Antwerp.</p>
-          <p class="bodycopy">A new story will be revealed on the 1st of each month, culminating in June, the month we remember Plantin’s
+          <p class="bodycopy">A new story will be revealed on the 1st of each month, culminating in June, the month we
+            remember Plantin’s
             legacy.</p>
         </div>
       </div>
