@@ -115,30 +115,35 @@
     <section class="stacking__cards">
       <!-- card 1 -->
       <div class="card__block">
-        <div class="card__img--group">
-          <picture class="card__picture">
-            <img class="card__img" sizes="(max-width: 400px) 100vw, 400px" srcset="
-                  src/assets/avif/gildedBook_bxf96p_c_scale,w_100.avif 100w,
-                  src/assets/avif/gildedBook_bxf96p_c_scale,w_252.avif 252w,
-                  src/assets/avif/gildedBook_bxf96p_c_scale,w_377.avif 377w,
-                  src/assets/avif/gildedBook_bxf96p_c_scale,w_400.avif 400w"
-              src="src/assets/avif/gildedBook_bxf96p_c_scale,w_400.avif" alt="">
-          </picture>
-          <div class="card__text">
+        <div class="card__wrapper">
+          <div class="leather__overlay"></div>
+          <div class="card__header--group">
+            <picture class="card__picture">
+              <img class="card__img" sizes="(max-width: 400px) 100vw, 400px" srcset="
+                    src/assets/avif/gildedBook_bxf96p_c_scale,w_100.avif 100w,
+                    src/assets/avif/gildedBook_bxf96p_c_scale,w_252.avif 252w,
+                    src/assets/avif/gildedBook_bxf96p_c_scale,w_377.avif 377w,
+                    src/assets/avif/gildedBook_bxf96p_c_scale,w_400.avif 400w"
+                src="src/assets/avif/gildedBook_bxf96p_c_scale,w_400.avif" alt="">
+            </picture>
             <h3 class="card__title">careers gift</h3>
+          </div>
+          <!-- <div class="card__text"> -->
             <p class="bodycopy card__bodycopy">Being a bookbinder gave him great and important jobs. This made him a
-              proud man. With
+              <strong>proud man</strong>. With
               his bookbinding
               skills he was
-              assigned to bind a book with gilded leather, a very expensive and valuable material. Requested by the King
+              assigned to bind a book with <strong>gilded leather</strong>, a very expensive and valuable material.
+              Requested by the King
               of Spain, he
-              himself had to deliver the book.</p>
-          </div>
+              himself had to <strong>deliver the book</strong>.
+            </p>
+          <!-- </div> -->
         </div>
       </div>
       <!-- card 2 -->
-      <div>
-        <p>Click me!</p>
+      <div class="card__block">
+        <p class="card__cta">Click me!</p>
         <div class="flipcard__container">
           <div class="flipcard">
             <div class="flipcard__front">
@@ -158,19 +163,22 @@
       </div>
       <!-- card 3 -->
       <div class="card__block">
-        <div class="card__text">
-          <h3 class="card__title">Approaching Merchants</h3>
-          <p class="bodycopy card__bodycopy">Walking the streets with the book was risky. Along the way, merchants stopped Plantin,
-            their charms
-            sparking a
-            conversation. Aware of their intentions, Plantin tried to hurry on, but the merchants approached
-            again—forcing a
-            decision.</p>
+        <div class="card__wrapper">
+          <div class="card__text">
+            <h3 class="card__title">Approaching Merchants</h3>
+            <p class="bodycopy card__bodycopy">Walking the streets with the book was risky. Along the way, merchants
+              stopped Plantin,
+              their charms
+              sparking a
+              conversation. Aware of their intentions, Plantin tried to hurry on, but the merchants approached
+              again—forcing a
+              decision.</p>
+          </div>
         </div>
       </div>
       <!-- card 4 -->
-      <div>
-        <p>Click me!</p>
+      <div class="card__block">
+        <p class="card__cta">Click me!</p>
         <div class="flipcard__container">
           <div class="flipcard">
             <div class="flipcard__front">
@@ -178,7 +186,7 @@
             </div>
             <div class="flipcard__back">
               <div class="flipcard__content">
-                <h3 class="flipcard__title">How will you react?</h3>
+                <h3 class="flipcard__title">How would you react?</h3>
                 <div class="flipcard__actions">
                   <button class="flipcard__button">Ignore Them</button>
                   <button class="flipcard__button">Let them talk</button>
@@ -188,7 +196,7 @@
           </div>
         </div>
       </div>
-      
+
       <!-- this is for the background & ornamenttexture -->
       <div>
         <!-- this is the div-title -->
