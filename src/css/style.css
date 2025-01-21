@@ -274,6 +274,7 @@ h2 {
   height: 26rem;
   transform-style: preserve-3d;
   transition: transform 0.6s;
+  box-sizing: border-box;
 }
 
 .flipcard.flipped {
@@ -287,6 +288,7 @@ h2 {
   height: 100%;
   border-radius: 0.6rem;
   backface-visibility: hidden;
+  box-sizing: border-box;
 }
 
 .flipcard__front {
@@ -298,21 +300,43 @@ h2 {
 }
 
 .flipcard__back {
-  background-color: var(--rustyRed);
+  background-color: var(--fujiSnow);
   display: flex;
   justify-content: center;
   align-items: center;
   transform: rotateY(180deg);
+  border: 15px solid var(--warmCopper);
 }
 
-.flipcard__title{
+.flipcard__title {
   font-size: 2.1875rem;
   font-family: var(--garamond);
   text-transform: capitalize;
   font-weight: 700;
   margin-inline-start: 2.5rem;
   margin-inline-end: 2.5rem;
+  margin-block-end: 2.5rem;
   text-align: center;
+}
+
+.flipcard__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flipcard__button {
+  background-image: url("../assets/svg/buttonSmall.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-size: 10rem;
+  width: 10rem;
+  height: 3.7rem;
+  font-family: var(--garamond);
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: capitalize;
 }
 
 .stacking__cards {
@@ -323,7 +347,7 @@ h2 {
 
 .card__wrapper {
   background-color: var(--fujiSnow);
-  border: 10px solid #CE9F89;
+  border: 10px solid var(--warmCopper);
   position: relative;
   padding: 1rem;
 }
@@ -344,6 +368,8 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
 }
 
 .card__block:nth-of-type(1) {
@@ -383,6 +409,56 @@ h2 {
   letter-spacing: 0.46875rem;
   text-transform: capitalize;
   padding-block-end: 1.25rem;
+}
+
+.injury__section {
+  background-color: var(--eerieBlack);
+  background-image: url("../assets/avif/textureTile.avif");
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.leather__overlay--injury {
+  background-image: url("../assets/jpeg/leatherTextureMobile.jpg");
+  mix-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  mix-blend-mode: multiply;
+  z-index: 1;
+}
+
+.injury__section--title {
+  font-family: var(--garamond);
+  font-size: 2.1875rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  text-align: center;
+  color: var(--fujiSnow);
+  margin-block-start: 4rem;
+  margin-block-end: 5rem;
+}
+
+.injury__section--wrapper {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.injury__section--content {
+  position: relative;
+  z-index: 2;
+}
+
+.injury__section--text {
+  color: #ECCDB8;
+  margin-inline-start: 1.7rem;
+  margin-inline-end: 1.7rem;
 }
 
 @media only screen and (min-width: 23em) {
@@ -459,6 +535,10 @@ h2 {
 @media only screen and (min-width: 52em) {
   .container::before {
     content: "min-width: 52em";
+  }
+
+  .hero__wrapper>div:nth-of-type(3)>p.accent__text {
+    display: block;
   }
 
   .nav__wrapper {
