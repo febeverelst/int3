@@ -269,6 +269,39 @@ h2 {
   margin-inline-end: .5rem;
 }
 
+.divider {
+  display: flex;
+  justify-content: center;
+  gap: 1.3rem;
+  margin-block-start: 6rem;
+}
+
+.divider__group {
+  flex-shrink: 0;
+}
+
+.divider__text--big {
+  font-family: var(--inter);
+  font-size: 2.6875rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.29563rem;
+  text-align: center;
+}
+
+.spacing{
+  margin-inline-start: .5rem;
+}
+
+.divider__text--small{
+  font-family: var(--garamond);
+  font-size: 0.875rem;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.875rem;
+  letter-spacing: 0.2625rem;
+  text-transform: capitalize;
+}
 
 @media only screen and (min-width: 23em) {
   .container::before {
