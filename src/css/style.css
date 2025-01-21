@@ -274,6 +274,7 @@ h2 {
   justify-content: center;
   gap: 1.3rem;
   margin-block-start: 6rem;
+  overflow: hidden;
 }
 
 .divider__group {
