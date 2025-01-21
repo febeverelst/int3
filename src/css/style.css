@@ -441,7 +441,7 @@ h2 {
   text-align: center;
   color: var(--fujiSnow);
   margin-block-start: 4rem;
-  margin-block-end: 5rem;
+  margin-block-end: 3rem;
 }
 
 .injury__section--wrapper {
@@ -461,7 +461,92 @@ h2 {
   margin-inline-end: 1.7rem;
 }
 
+.printer__divider {
+  margin-block-start: 2rem;
+}
 
+.printing {
+  position: relative;
+  z-index: 1;
+  margin-block-end: 3rem;
+}
+
+.roller__img {
+  position: absolute;
+  transform: rotate(45deg);
+  width: 8rem;
+  top: -15rem;
+  right: -2rem;
+}
+
+.printing__quote {
+  text-align: center;
+  font-family: var(--garamond);
+  font-size: 1.25rem;
+  margin-inline-start: 2.6rem;
+  margin-inline-end: 2.6rem;
+  margin-block-start: 2.6rem;
+  position: relative;
+}
+
+.printing__quote--accent {
+  font-style: italic;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.printing__quote::before {
+  content: '“';
+  position: absolute;
+  font-size: 3.75rem;
+  top: -1.5rem;
+  left: -1.5rem;
+}
+
+.printing__quote::after {
+  content: '”';
+  position: absolute;
+  font-size: 3.75rem;
+  top: -1.5rem;
+  right: -1.5rem;
+}
+
+.printing__content{
+  margin-block-start: -3.5rem;
+}
+
+.printing__picture--image{
+  margin-inline-start: -2rem;
+  height: 25rem;
+}
+
+.printing__keywords{
+  margin-block-start: -5rem;
+}
+
+.printing__keyword{
+  font-family: var(--inter);
+  text-transform: uppercase;
+  font-size: 2.875rem;
+  letter-spacing: -0.31625rem;
+  font-weight: 900;
+  margin-block-end: 1.8rem;
+}
+
+.right__keyword{
+  text-align: right;
+  margin-inline-end: .5rem;
+}
+
+.left__keyword{
+  text-align: left;
+  margin-inline-start: .5rem;
+}
+
+.printing__bodycopy{
+  margin-inline-start: 2rem;
+  margin-inline-end: 2rem;
+}
 
 @media only screen and (min-width: 23em) {
   .container::before {
