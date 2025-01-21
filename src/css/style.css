@@ -1,5 +1,6 @@
 :root {
   --rustyRed: #B12E0A;
+  --rustRed_dark: #9c2606;
   --eerieBlack: #1C1C1C;
   --fujiSnow: #F1EFE9;
   --warmCopper: #B76E56;
@@ -74,12 +75,17 @@ body {
   text-transform: capitalize;
   width: fit-content;
   padding: 1.5rem;
-  font-weight: 700;
+  margin-block-end: 1rem;
+  font-weight: 600;
 }
 
 .menu__item--special {
   background-color: var(--rustyRed);
   color: var(--fujiSnow);
+}
+
+.menu__item--special:active {
+  background-color: var(--rustRed_dark);
 }
 
 .menu.active .close-btn {
@@ -171,8 +177,9 @@ header {
   font-weight: 700;
 }
 
-
-
+.hero__wrapper>div:nth-of-type(3)>p.accent__text {
+  display: none;
+}
 
 .flipcard__container {
   perspective: 1000px;
@@ -200,7 +207,7 @@ header {
   backface-visibility: hidden;
 }
 
-.flipcard__front{
+.flipcard__front {
   background-color: var(--warmCopper);
   display: flex;
   justify-content: center;
@@ -208,12 +215,58 @@ header {
   transform: rotateY(0deg);
 }
 
-.flipcard__back{
+.flipcard__back {
   background-color: var(--rustyRed);
   display: flex;
   justify-content: center;
   align-items: center;
   transform: rotateY(180deg);
+}
+
+h2 {
+  font-family: var(--garamond);
+  font-size: 2.1875rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.bodycopy {
+  font-family: var(--inter);
+  font-size: 1.0625rem;
+  line-height: 140%;
+}
+
+.book__binding {
+  margin-block-start: 4rem;
+}
+
+.book__binding--intro {
+  margin-inline-start: 2rem;
+  margin-inline-end: 2rem;
+  margin-block-end: 4rem;
+}
+
+.book__binding--title {
+  margin-block-end: 2rem;
+  justify-self: center;
+}
+
+.book__binding--steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 1rem;
+}
+
+.book__binding--button {
+  background-image: url("../assets/svg/buttonSmall.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10rem;
+  width: 10rem;
+  height: 4rem;
+  margin-inline-start: .5rem;
+  margin-inline-end: .5rem;
 }
 
 
@@ -360,6 +413,10 @@ header {
   .menu {
     display: block;
     background-color: transparent;
+  }
+
+  .menu__item--special:hover {
+    background-color: var(--rustRed_dark);
   }
 }
 

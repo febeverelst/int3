@@ -16,6 +16,7 @@
 </head>
 
 <body>
+  <div class="progress"></div>
   <header>
     <div class="header__texture--back"></div>
     <div class="header__wrapper">
@@ -29,7 +30,8 @@
             <li class="menu__item"> collection & research </li>
             <li class="menu__item"> what to see </li>
             <li class="menu__item"> about </li>
-            <li class="menu__item menu__item--special"> immerse yourself </li>
+            <li class="menu__item"><a href="/index.html" class="menu__item menu__item--special">immerse yourself</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -62,23 +64,33 @@
     <div class="header__texture--front"></div>
   </header>
   <main>
-    <section>
-      <div>
-        <h2>Before we start</h2>
-        <p>Let’s check your book-binding skills by clicking on the <strong>right option</strong> in the <strong>right
+    <section class="book__binding">
+      <div class="book__binding--intro">
+        <h2 class="book__binding--title">Before we start</h2>
+        <p class="bodycopy book__binding--text">Let’s check your book-binding skills by clicking on the <strong>right option</strong> in the
+          <strong>right
             order</strong>. Each step you complete brings
           your virtual book closer to perfection! Can you master the art of binding? Get ready, stay sharp, and let’s
           begin—press
-          the buttons in <strong>sequence</strong> to turn loose pages into a beautiful, bound masterpiece!</p>
+          the buttons in <strong>sequence</strong> to turn loose pages into a beautiful, bound masterpiece!
+        </p>
       </div>
       <div>
-        <div>
-          <div><button>Prepare Signatures</button></div>
-          <div><button>Fold Pages</button></div>
-          <div><button>Sew Binding</button></div>
-          <div><button>Attach Covers</button></div>
-          <div><button>Glue Spine</button></div>
-          <div><button>Trim Edges</button></div>
+        <picture>
+          <img sizes="(max-width: 982px) 100vw, 982px" srcset="
+              src/assets/avif/BookBindingBg_stvbbw_c_scale,w_200.avif 200w,
+              src/assets/avif/BookBindingBg_stvbbw_c_scale,w_677.avif 677w,
+              src/assets/avif/BookBindingBg_stvbbw_c_scale,w_982.avif 982w"
+            src="src/assets/avif/BookBindingBg_stvbbw_c_scale,w_982.avif" alt="book by plantin, museum plantin moretus" class="book__binding--image">
+        </picture>
+        <div class="book__binding--steps">
+          <!-- try changing these to checkboxes -->
+          <div class="book__binding--step"><button class="book__binding--button">Prepare Signatures</button></div>
+          <div class="book__binding--step"><button class="book__binding--button">Fold Pages</button></div>
+          <div class="book__binding--step"><button class="book__binding--button">Sew Binding</button></div>
+          <div class="book__binding--step"><button class="book__binding--button">Attach Covers</button></div>
+          <div class="book__binding--step"><button class="book__binding--button">Glue Spine</button></div>
+          <div class="book__binding--step"><button class="book__binding--button">Trim Edges</button></div>
         </div>
       </div>
     </section>
@@ -111,7 +123,8 @@
           </picture>
           <div>
             <h3>careers gift</h3>
-            <p>Being a bookbinder gave him great and important jobs. This made him a proud man. With his bookbinding
+            <p class="bodycopy">Being a bookbinder gave him great and important jobs. This made him a proud man. With
+              his bookbinding
               skills he was
               assigned to bind a book with gilded leather, a very expensive and valuable material. Requested by the King
               of Spain, he
@@ -141,7 +154,8 @@
       <div>
         <div>
           <h3>Approaching Merchants</h3>
-          <p>Walking the streets with the book was risky. Along the way, merchants stopped Plantin, their charms
+          <p class="bodycopy">Walking the streets with the book was risky. Along the way, merchants stopped Plantin,
+            their charms
             sparking a
             conversation. Aware of their intentions, Plantin tried to hurry on, but the merchants approached
             again—forcing a
@@ -174,7 +188,8 @@
           <h3>OH NO!</h3>
           <!-- this will contain the leather texture with the text above -->
           <div>
-            <p>The injury to Plantin’s arm left him incapacitated, unable to perform the fine, dexterous work that
+            <p class="bodycopy">The injury to Plantin’s arm left him incapacitated, unable to perform the fine,
+              dexterous work that
               bookbinding
               required. This accident could have marked the end of his professional aspirations. Instead, it became a
               pivotal turning
@@ -224,7 +239,8 @@
             <p>skept i c i sm</p>
             <p>excellence</p>
           </div>
-          <p>His first commissions were modest—grammars, devotional texts, and scholarly works. Every project carried
+          <p class="bodycopy">His first commissions were modest—grammars, devotional texts, and scholarly works. Every
+            project carried
             the mark of a
             man determined to create beauty and durability. The early profits were meager, and setbacks common. In one
             instance, a
@@ -239,7 +255,8 @@
         <div>
           <p>Beh i nd every great pr i nter stands an even
             greater font</p>
-          <p>During the start-up of its print business, sans serif fonts were hugely popular. Instead of written text,
+          <p class="bodycopy">During the start-up of its print business, sans serif fonts were hugely popular. Instead
+            of written text,
             letterpress
             printing was in high demand. All different typefaces emerged but around Plantin, there were 2 that were the
             most
@@ -269,7 +286,8 @@
             </picture>
           </div>
           <div>
-            <p>Europe in the mid-1500s was a cauldron of religious conflict (because of the renaissance). The Protestant
+            <p class="bodycopy">Europe in the mid-1500s was a cauldron of religious conflict (because of the
+              renaissance). The Protestant
               Reformation
               and Catholic Counter-Reformation polarised communities and threatened livelihoods.</p>
           </div>
@@ -285,7 +303,8 @@
             </picture>
           </div>
           <div>
-            <p>Printers, whose work could disseminate radical ideas, were under constant scrutiny. Plantin, though a
+            <p class="bodycopy">Printers, whose work could disseminate radical ideas, were under constant scrutiny.
+              Plantin, though a
               Catholic, had
               sympathies for humanist thought, making him vulnerable to suspicion.</p>
           </div>
@@ -302,7 +321,8 @@
             </picture>
           </div>
           <div>
-            <p>In 1562, the Inquisition targeted him for printing a book deemed heretical. Though he escaped severe
+            <p class="bodycopy">In 1562, the Inquisition targeted him for printing a book deemed heretical. Though he
+              escaped severe
               punishment, the
               experience underscored the precarious balance between enterprise and ideology. With caution and clever
               alliances,
@@ -319,7 +339,8 @@
             </picture>
           </div>
           <div>
-            <p>With caution and strategic alliances, Plantin navigated censorship by printing Catholic liturgical texts
+            <p class="bodycopy">With caution and strategic alliances, Plantin navigated censorship by printing Catholic
+              liturgical texts
               for King Philip
               II of Spain while discreetly publishing humanist works under an alias: Guillaume Rivière.</p>
           </div>
@@ -346,7 +367,8 @@
     <section>
       <div>
         <h2>Polygloth Bible</h2>
-        <p>Plantin’s breakthrough came in the late 1560s when King Philip II of Spain commissioned the Biblia
+        <p class="bodycopy">Plantin’s breakthrough came in the late 1560s when King Philip II of Spain commissioned the
+          Biblia
           Polyglotta, a
           monumental Bible with parallel texts in Hebrew, Greek, and Latin. Printed between 1568 and 1573, the project
           demanded
@@ -359,36 +381,42 @@
       <div>
         <div>
           <h3>Growth</h3>
-          <p>Plantin’s printing house expanded significantly after the success of the Biblia Polyglotta, growing to 15
+          <p class="bodycopy">Plantin’s printing house expanded significantly after the success of the Biblia
+            Polyglotta, growing to 15
             presses by the
             mid-1570s. His once-small operation became a thriving enterprise renowned across Europe.</p>
         </div>
         <div>
           <h3>Reputat i on</h3>
-          <p>Known for exceptional quality and intellectual rigor, Plantin earned the trust of prominent clients and
+          <p class="bodycopy">Known for exceptional quality and intellectual rigor, Plantin earned the trust of
+            prominent clients and
             scholars. His
             reputation solidified his place as one of the most respected printers of his time.</p>
         </div>
         <div>
           <h3>I nnovat ion</h3>
-          <p>Plantin embraced new ideas and techniques, enhancing the efficiency and scope of his printing. His
+          <p class="bodycopy">Plantin embraced new ideas and techniques, enhancing the efficiency and scope of his
+            printing. His
             forward-thinking
             approach helped him stay ahead in a competitive industry.</p>
         </div>
         <div>
           <h3>Res i l i ence</h3>
-          <p>Despite financial pressures and personal setbacks, Plantin persisted in his craft. He turned obstacles into
+          <p class="bodycopy">Despite financial pressures and personal setbacks, Plantin persisted in his craft. He
+            turned obstacles into
             opportunities, demonstrating remarkable resilience throughout his career.</p>
         </div>
         <div>
           <h3>Opportun i ty</h3>
-          <p>An injury forced Plantin to change professions, leading him into printing. What began as adversity became
+          <p class="bodycopy">An injury forced Plantin to change professions, leading him into printing. What began as
+            adversity became
             the foundation
             of a legacy in publishing.</p>
         </div>
         <div>
           <h3>Perseverance</h3>
-          <p>Navigating political turmoil and tight deadlines, Plantin remained steadfast in his pursuit of excellence.
+          <p class="bodycopy">Navigating political turmoil and tight deadlines, Plantin remained steadfast in his
+            pursuit of excellence.
             His
             determination secured lasting influence and success in the printing world.</p>
         </div>
@@ -399,7 +427,8 @@
         <img src="src/assets/avif/whiteLogo.avif" alt="Plantin-moretus logo">
         <h2>impressions of time</h2>
         <div>
-          <p>"Impressions of Time" is a storytelling campaign sharing six captivating tales from the world of Christophe
+          <p class="bodycopy">"Impressions of Time" is a storytelling campaign sharing six captivating tales from the
+            world of Christophe
             Plantin and
             the Moretus family. Follow their journey of innovation and craftsmanship, and uncover the legacy of printing
             at the
@@ -410,19 +439,19 @@
       </div>
       <!-- this will contain the countdown -->
       <div>
-        <div>01/01/2025</div>
-        <div>01/02/2025</div>
-        <div>01/03/2025</div>
-        <div>01/04/2025</div>
-        <div>01/05/2025</div>
-        <div>01/06/2025</div>
+        <div class="bodycopy">01/01/2025</div>
+        <div class="bodycopy">01/02/2025</div>
+        <div class="bodycopy">01/03/2025</div>
+        <div class="bodycopy">01/04/2025</div>
+        <div class="bodycopy">01/05/2025</div>
+        <div class="bodycopy">01/06/2025</div>
       </div>
     </section>
   </main>
   <footer>
     <div>
       <h2>sign up for our newletter</h2>
-      <p>And get notified when a new story is out.</p>
+      <p class="bodycopy">And get notified when a new story is out.</p>
       <div>
         <form action="signup" method="post">
           <input type="email" name="email" placeholder="you email adress" required>
@@ -437,9 +466,9 @@
       </div>
     </div>
     <div>
-      <p>Vrijdagmarkt 22, <br> 2000 Antwerpen</p>
-      <p>tel. +32 (0)3 221 14 50</p>
-      <p>museum.plantin.moretus@antwerpen.be</p>
+      <p class="bodycopy">Vrijdagmarkt 22, <br> 2000 Antwerpen</p>
+      <p class="bodycopy">tel. +32 (0)3 221 14 50</p>
+      <p class="bodycopy">museum.plantin.moretus@antwerpen.be</p>
     </div>
   </footer>
   <script type="module" src="src/js/main.js"></script>
