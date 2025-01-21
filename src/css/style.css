@@ -461,6 +461,8 @@ h2 {
   margin-inline-end: 1.7rem;
 }
 
+
+
 @media only screen and (min-width: 23em) {
   .container::before {
     content: "min-width: 23em";
@@ -541,6 +543,7 @@ h2 {
     display: block;
   }
 
+
   .nav__wrapper {
     justify-content: center;
   }
@@ -596,7 +599,7 @@ h2 {
   }
 }
 
-@media only screen and (min-width: 75em) {
+@media only screen and (min-width: 78em) {
   .container::before {
     content: "min-width: 90em";
   }
