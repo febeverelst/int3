@@ -220,14 +220,35 @@ h2 {
 }
 
 .book__binding--button {
-  background-image: url("../assets/svg/buttonSmall.svg");
+  background-image: url("../assets/svg/uncheckedButton.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 10rem;
   width: 10rem;
   height: 4rem;
-  margin-inline-start: .5rem;
-  margin-inline-end: .5rem;
+  margin-inline-start: 0.5rem;
+  margin-inline-end: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  color: var(--rustyRed);
+}
+
+.book__binding--checkbox:checked+.book__binding--button {
+  background-image: url("../assets/svg/buttonSmall.svg");
+  color: var(--fujiSnow);
+}
+
+.book__binding--checkbox {
+  display: none;
+}
+
+.book__binding--step label {
+  display: flex;
+  align-items: center;
 }
 
 .cta {
@@ -1083,17 +1104,14 @@ h2 {
   @keyframes bounce {
     0% {
       transform: translateY(0);
-      /* Start at the original position */
     }
 
     50% {
       transform: translateY(10px);
-      /* Move it down */
     }
 
     100% {
       transform: translateY(0);
-      /* Return to original position */
     }
   }
 
@@ -1104,9 +1122,80 @@ h2 {
     align-items: center;
   }
 
+  .book__binding--text {
+    width: 65vw;
+  }
+
+  .book__binding--image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  .book__binding--step {
+    position: absolute;
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+      /* Starting position */
+    }
+
+    50% {
+      transform: translateY(-10px);
+      /* Move up */
+    }
+
+    100% {
+      transform: translateY(0);
+      /* Return to original position */
+    }
+  }
 
 
+  .step1 {
+    position: absolute;
+    top: 0;
+    right: 10%;
+    animation: float 5.7s ease-in-out infinite;
+  }
 
+  .step2 {
+    position: absolute;
+    bottom: 5%;
+    left: 4rem;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .step3 {
+    position: absolute;
+    bottom: 0;
+    right: 5rem;
+    animation: float 6.5s ease-in-out infinite;
+  }
+
+  .step4 {
+    position: absolute;
+    top: 35%;
+    left: 0;
+    animation: float 5s ease-in-out infinite;
+  }
+
+  .step5 {
+    position: absolute;
+    top: 0;
+    left: 2rem;
+    animation: float 7s ease-in-out infinite;
+  }
+
+  .step6 {
+    position: absolute;
+    top: 45%;
+    right: 0;
+    animation: float 6s ease-in-out infinite;
+  }
 
 
 
@@ -1168,6 +1257,13 @@ h2 {
   .menu {
     display: block;
     background-color: transparent;
+  }
+
+  .menu__list {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
   }
 
   .menu__item--special:hover {
