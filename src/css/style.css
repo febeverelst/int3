@@ -112,6 +112,7 @@ header {
   left: 0;
   right: 0;
   z-index: -10;
+  opacity: 50%;
 }
 
 .header__texture--front {
@@ -397,14 +398,6 @@ h2 {
   align-items: center;
   margin-block-start: 1rem;
   margin-block-end: 1rem;
-}
-
-.card__block:nth-of-type(1) {
-  width: 20rem;
-}
-
-.card__block:nth-of-type(3) {
-  width: 17.5rem;
 }
 
 .card__header--group {
@@ -1004,6 +997,14 @@ h2 {
   .header__img {
     margin-block-start: -10rem;
   }
+
+  .card__block:nth-of-type(1) {
+    width: 20rem;
+  }
+
+  .card__block:nth-of-type(3) {
+    width: 17.5rem;
+  }
 }
 
 @media only screen and (min-width: 51em) {
@@ -1116,10 +1117,12 @@ h2 {
   }
 
   .book__binding {
-    height: 100vh;
+    height: 75vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    margin-block-end: 2rem;
   }
 
   .book__binding--text {
@@ -1131,6 +1134,7 @@ h2 {
     flex-direction: column;
     align-items: center;
     position: relative;
+    margin-block-start: 4rem;
   }
 
   .book__binding--step {
@@ -1153,7 +1157,6 @@ h2 {
       /* Return to original position */
     }
   }
-
 
   .step1 {
     position: absolute;
@@ -1197,7 +1200,7 @@ h2 {
     animation: float 6s ease-in-out infinite;
   }
 
-  .divider__group{
+  .divider__group {
     margin-inline-start: 5rem;
     margin-inline-end: 5rem;
   }
@@ -1207,11 +1210,83 @@ h2 {
     letter-spacing: -0.55rem;
   }
 
-  .divider__text--small{
+  .divider__text--small {
     font-size: 1.5rem;
     letter-spacing: 0.5rem;
     padding-inline-start: 1.5rem;
   }
+
+  .stacking__cards {
+    margin-block-start: 5rem;
+  }
+
+  .card__block:nth-of-type(1) {
+    width: 100vw;
+  }
+
+  .card__block:nth-of-type(3) {
+    width: 100vw;
+  }
+
+  .card__wrapper {
+    height: 50vh;
+    width: 50vw;
+    border: 14px solid var(--warmCopper);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+  }
+
+  .card__img {
+    width: 20vw;
+  }
+
+  .card__title {
+    font-size: 3.5rem;
+    margin-inline-start: 1rem;
+    width: 21vw;
+  }
+
+  .card__bodycopy {
+    width: 40vw;
+  }
+
+  .flipcard {
+    height: 40vh;
+    width: 70vw;
+  }
+
+  .flipcard__actions {
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .injury__section {
+    height: 75vh;
+  }
+
+.injury__section--wrapper{
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-block-start: -3rem;
+}
+
+.injury__section--title{
+  font-size: 3rem;
+
+}
+
+.injury__section--text{
+  width: 75vw;
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 160%;
+}
 
   .carousel,
   .carousel__item,
@@ -1262,6 +1337,10 @@ h2 {
 @media only screen and (min-width: 78em) {
   .container::before {
     content: "min-width: 90em";
+  }
+
+  .header__texture--back {
+    background-image: url("../assets/jpeg/callyTextureDesktop.jpg");
   }
 
   .hamburger {
