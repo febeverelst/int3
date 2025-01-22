@@ -1269,24 +1269,24 @@ h2 {
     height: 75vh;
   }
 
-.injury__section--wrapper{
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  margin-block-start: -3rem;
-}
+  .injury__section--wrapper {
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-block-start: -3rem;
+  }
 
-.injury__section--title{
-  font-size: 3rem;
+  .injury__section--title {
+    font-size: 3rem;
 
-}
+  }
 
-.injury__section--text{
-  width: 75vw;
-  text-align: center;
-  font-size: 1.3rem;
-  line-height: 160%;
-}
+  .injury__section--text {
+    width: 75vw;
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 160%;
+  }
 
   .carousel,
   .carousel__item,
@@ -1370,8 +1370,14 @@ h2 {
     content: "min-width: 90em";
   }
 
+  .header__wrapper {
+    height: ;
+  }
+
   .hero__wrapper {
     flex-direction: row;
+    margin-block-start: -3rem;
+    height: 100%;
   }
 
   .accent__text {
@@ -1382,5 +1388,13 @@ h2 {
 
   .right__word {
     text-align: right;
+  }
+
+  .cta {
+    margin-block-start: -3rem;
+  }
+
+  .book__binding {
+    margin-block-start: 8rem;
   }
 }
