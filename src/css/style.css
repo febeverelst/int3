@@ -651,15 +651,15 @@ h2 {
   text-transform: capitalize;
 }
 
-.divider__fame{
+.divider__fame {
   gap: .5rem;
 }
 
-.small__text--fame{
+.small__text--fame {
   font-size: 0.8rem;
 }
 
-.bible__title{
+.bible__title {
   font-family: var(--garamond);
   font-size: 2.1875rem;
   font-weight: 700;
@@ -667,18 +667,196 @@ h2 {
   text-align: center;
 }
 
-.bible__description{
+.bible__description {
   margin-inline-start: 2.3rem;
   margin-inline-end: 2.3rem;
   margin-block-start: 1rem;
 }
 
-.bible__keyword--title{
+.bible__keyword--title {
   font-family: var(--inter);
   text-transform: uppercase;
   font-weight: 900;
   font-size: 2.875rem;
   letter-spacing: -0.31625rem;
+}
+
+.campaign {
+  position: relative;
+  background-color: var(--rustyRed);
+  height: 75vh;
+}
+
+.calli__overlay--campaign {
+  background-image: url("../assets/jpeg/calliTextrueMobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  mix-blend-mode: screen;
+  opacity: 10%;
+}
+
+.campaign__wrapper {
+  position: absolute;
+  z-index: 1;
+}
+
+.campaign__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.museum__logo--campaign {
+  width: 3.5rem;
+  margin-block-start: .2rem;
+}
+
+.campaign__title {
+  font-family: var(--garamond);
+  font-size: 1.5625rem;
+  color: var(--fujiSnow);
+  line-height: 140%;
+}
+
+.campaign__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  color: var(--fujiSnow);
+  margin-block-start: 1.8rem;
+  margin-inline-start: 1.4rem;
+  margin-inline-end: 1.4rem;
+}
+
+.campaign__countdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.campaign__date {
+  width: 75vw;
+  height: 2.8rem;
+  background-color: var(--fujiSnow);
+  display: flex;
+  align-items: center;
+  padding-inline-start: 1.25rem;
+}
+
+.footer {
+  position: relative;
+  height: 45vh;
+  display: flex;
+  justify-content: center;
+}
+
+.calli__overlay--footer {
+  background-image: url("../assets/jpeg/calliTextrueMobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  mix-blend-mode: screen;
+  opacity: 60%;
+}
+
+.leather__overlay--footer {
+  background-image: url("../assets/jpeg/leatherTextureMobile.jpg");
+  mix-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.footer__wrapper {
+  position: absolute;
+  z-index: 1;
+  margin-block-start: 1rem;
+}
+
+.footer__title {
+  font-family: var(--garamond);
+  text-align: center;
+  font-size: 1.5625rem;
+  font-weight: 700;
+}
+
+.footer__description {
+  font-size: 0.9375rem;
+  text-align: center;
+  line-height: 140%;
+}
+
+.footer__form {
+  margin-block-start: .9rem;
+  margin-block-end: 1.4rem;
+}
+
+.footer__input {
+  border: 2px solid var(--rustyRed);
+  background-color: var(--fujiSnow);
+  padding-block-start: .7rem;
+  padding-block-end: .7rem;
+  padding-inline-start: .6rem;
+  font-family: var(--inter);
+  font-size: 0.75rem;
+  width: 15.5rem;
+}
+
+.footer__submit--button,
+.footer__nav--button {
+  background-color: var(--rustyRed);
+  color: var(--fujiSnow);
+  font-family: var(--inter);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  padding-block-start: .9rem;
+  padding-block-end: .9rem;
+  padding-inline-start: .6rem;
+  padding-inline-end: .6rem;
+}
+
+.footer__nav--button {
+  padding-inline-start: .65rem;
+  padding-inline-end: .65rem;
+}
+
+.footer__nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer__contact {
+  display: flex;
+  width: 11.9375rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.625rem;
+  margin: 0 auto;
+  margin-block-start: 1.6rem;
+}
+
+.footer__address,
+.footer__phone,
+.footer__email {
+  font-size: 0.625rem;
 }
 
 @media only screen and (min-width: 23em) {

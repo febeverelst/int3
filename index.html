@@ -454,54 +454,65 @@
         </div>
       </div>
     </section>
-    <section>
-      <div>
-        <img src="src/assets/avif/whiteLogo.avif" alt="Plantin-moretus logo">
-        <h2>impressions of time</h2>
-        <div>
-          <p class="bodycopy">"Impressions of Time" is a storytelling campaign sharing six captivating tales from the
-            world of Christophe
-            Plantin and
-            the Moretus family. Follow their journey of innovation and craftsmanship, and uncover the legacy of printing
-            at the
-            Plantin-Moretus Museum in Antwerp.</p>
-          <p class="bodycopy">A new story will be revealed on the 1st of each month, culminating in June, the month we
-            remember Plantin’s
-            legacy.</p>
+    <section class="campaign">
+      <div class="calli__overlay--campaign"></div>
+      <div class="campaign__wrapper">
+        <div class="campaign__content">
+          <img class="museum__logo--campaign" src="src/assets/avif/whiteLogo.avif" alt="Plantin-moretus logo">
+          <h2 class="campaign__title">impressions of time</h2>
+          <div class="campaign__text">
+            <p class="bodycopy campaign__description">"Impressions of Time" is a storytelling campaign sharing six captivating tales from the
+              world of Christophe
+              Plantin and
+              the Moretus family. Follow their journey of innovation and craftsmanship, and uncover the legacy of printing
+              at the
+              Plantin-Moretus Museum in Antwerp.</p>
+            <p class="bodycopy campaign__description">A new story will be revealed on the 1st of each month, culminating in June, the month we
+              remember Plantin’s
+              legacy.</p>
+          </div>
         </div>
-      </div>
-      <!-- this will contain the countdown -->
-      <div>
-        <div class="bodycopy">01/01/2025</div>
-        <div class="bodycopy">01/02/2025</div>
-        <div class="bodycopy">01/03/2025</div>
-        <div class="bodycopy">01/04/2025</div>
-        <div class="bodycopy">01/05/2025</div>
-        <div class="bodycopy">01/06/2025</div>
+        <!-- this will contain the countdown -->
+        <div class="campaign__countdown">
+          <div class="bodycopy campaign__date">01/01/2025</div>
+          <div class="bodycopy campaign__date">01/02/2025</div>
+          <div class="bodycopy campaign__date">01/03/2025</div>
+          <div class="bodycopy campaign__date">01/04/2025</div>
+          <div class="bodycopy campaign__date">01/05/2025</div>
+          <div class="bodycopy campaign__date">01/06/2025</div>
+        </div>
+        <div class="campaign__pagination">
+          <button>.</button>
+          <button>.</button>
+        </div>
       </div>
     </section>
   </main>
-  <footer>
-    <div>
-      <h2>sign up for our newletter</h2>
-      <p class="bodycopy">And get notified when a new story is out.</p>
-      <div>
-        <form action="signup" method="post">
-          <input type="email" name="email" placeholder="you email adress" required>
-          <button type="submit">Sign Up</button>
-        </form>
-        <div>
-          <button>home</button>
-          <button>plan your visit</button>
-          <button>archive</button>
-          <button>about</button>
+  <footer class="footer">
+    <div class="calli__overlay--footer"></div>
+    <div class="leather__overlay--footer"></div>
+    <div class="footer__wrapper">
+      <div class="footer__newsletter">
+        <h2 class="footer__title">sign up for our newletter</h2>
+        <p class="bodycopy footer__description">And get notified when a new story is out.</p>
+        <div class="footer__form--container">
+          <form class="footer__form" action="signup" method="post">
+            <input class="footer__input" type="email" name="email" placeholder="you email adress" required>
+            <button class="footer__submit--button" type="submit">Sign Up</button>
+          </form>
+          <div class="footer__nav">
+            <button class="footer__nav--button">home</button>
+            <button class="footer__nav--button">plan your visit</button>
+            <button class="footer__nav--button">archive</button>
+            <button class="footer__nav--button">about</button>
+          </div>
         </div>
       </div>
-    </div>
-    <div>
-      <p class="bodycopy">Vrijdagmarkt 22, <br> 2000 Antwerpen</p>
-      <p class="bodycopy">tel. +32 (0)3 221 14 50</p>
-      <p class="bodycopy">museum.plantin.moretus@antwerpen.be</p>
+      <div class="footer__contact">
+        <p class="bodycopy footer__address">Vrijdagmarkt 22, <br> 2000 Antwerpen</p>
+        <p class="bodycopy footer__phone">tel. +32 (0)3 221 14 50</p>
+        <p class="bodycopy footer__email">museum.plantin.moretus@antwerpen.be</p>
+      </div>
     </div>
   </footer>
   <script type="module" src="src/js/main.js"></script>
