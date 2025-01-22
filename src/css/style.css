@@ -203,11 +203,13 @@ h2 {
   margin-inline-start: 2rem;
   margin-inline-end: 2rem;
   margin-block-end: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .book__binding--title {
   margin-block-end: 2rem;
-  justify-self: center;
 }
 
 .book__binding--steps {
@@ -226,6 +228,10 @@ h2 {
   height: 4rem;
   margin-inline-start: .5rem;
   margin-inline-end: .5rem;
+}
+
+.cta {
+  display: none;
 }
 
 .divider {
@@ -1090,6 +1096,19 @@ h2 {
       /* Return to original position */
     }
   }
+
+  .book__binding {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+
+
+
+
 
   .carousel,
   .carousel__item,
