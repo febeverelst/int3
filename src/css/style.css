@@ -1197,7 +1197,21 @@ h2 {
     animation: float 6s ease-in-out infinite;
   }
 
+  .divider__group{
+    margin-inline-start: 5rem;
+    margin-inline-end: 5rem;
+  }
 
+  .divider__text--big {
+    font-size: 5rem;
+    letter-spacing: -0.55rem;
+  }
+
+  .divider__text--small{
+    font-size: 1.5rem;
+    letter-spacing: 0.5rem;
+    padding-inline-start: 1.5rem;
+  }
 
   .carousel,
   .carousel__item,
