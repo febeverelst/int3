@@ -979,7 +979,7 @@ h2 {
   }
 }
 
-@media only screen and (min-width: 52em) {
+@media only screen and (min-width: 51em) {
   .container::before {
     content: "min-width: 52em";
   }
@@ -988,16 +988,19 @@ h2 {
     display: block;
   }
 
+  .header__wrapper {
+    height: 100vh;
+  }
 
   .nav__wrapper {
     justify-content: center;
   }
 
   .menu__list {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3.4375rem;
+    gap: 2rem;
   }
 
   .title__accent {
@@ -1035,12 +1038,57 @@ h2 {
   }
 
   .header__img {
-    margin-block-start: 0rem;
+    margin-block-start: 10rem;
   }
 
   .accent__text {
     font-size: 1.5625rem;
     font-weight: 700;
+  }
+
+  .accent__text--first {
+    margin-block-start: 5rem;
+  }
+
+  .right__word {
+    display: block;
+    text-align: center;
+  }
+
+  .cta {
+    margin-block-start: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+  }
+
+  .cta__text {
+    font-family: var(--inter);
+    font-size: 0.9375rem;
+  }
+
+  .cta__icon {
+    display: block;
+    margin: 0 auto;
+    animation: bounce 1s ease-in-out infinite;
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+      /* Start at the original position */
+    }
+
+    50% {
+      transform: translateY(10px);
+      /* Move it down */
+    }
+
+    100% {
+      transform: translateY(0);
+      /* Return to original position */
+    }
   }
 
   .carousel,
@@ -1082,9 +1130,11 @@ h2 {
     gap: 1rem;
   }
 
-  .campaign__date{
+  .campaign__date {
     margin-inline-start: 1.25rem;
   }
+
+
 }
 
 @media only screen and (min-width: 78em) {

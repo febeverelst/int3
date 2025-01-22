@@ -29,7 +29,7 @@ buttons.forEach((button, index) => {
 });
 
 const resetCarouselItems = () => {
-    if (window.innerWidth >= 52 * 16) { // Convert 52em to pixels (assuming 1em = 16px)
+    if (window.innerWidth >= 52 * 16) {
         carouselItems.forEach(item => {
             item.style.removeProperty('opacity');
             item.style.removeProperty('visibility');
@@ -38,44 +38,12 @@ const resetCarouselItems = () => {
     }
 };
 
-const startCountdown = () => {
-    const dateElements = document.querySelectorAll('.carousel__item .campaign__date');
-
-    dateElements.forEach((element, index) => {
-        if (index === 0) return; // Skip the first element (label)
-
-        const targetDate = new Date(element.textContent.trim());
-        if (isNaN(targetDate)) return; // Skip if invalid date
-
-        // Timer update function
-        const updateTimer = () => {
-            const currentTime = new Date();
-            const timeRemaining = targetDate - currentTime;
-
-            if (timeRemaining <= 0) {
-                element.textContent = `${element.textContent.trim()} - Countdown finished!`;
-                clearInterval(intervalId);
-            } else {
-                const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-                element.textContent = `${element.textContent.trim()} - ${days}d ${hours}h ${minutes}m ${seconds}s`;
-            }
-        };
-
-        const intervalId = setInterval(updateTimer, 1000);
-        updateTimer(); // Initial call to avoid 1-second delay
-    });
-};
-
 
 const init = () =>{
     window.addEventListener('resize', resetCarouselItems);
     resetCarouselItems();
     carouselItems[0].classList.add('active');
     buttons[0].classList.add('active');
-    startCountdown();
 
 }
 
