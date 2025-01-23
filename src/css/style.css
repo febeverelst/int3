@@ -1118,7 +1118,7 @@ h2 {
   .cta__icon {
     display: block;
     margin: 0 auto;
-    animation: bounce 1s ease-in-out infinite;
+    animation: bounce 1.5s ease-in-out infinite;
   }
 
   @keyframes bounce {
@@ -1528,7 +1528,6 @@ h2 {
   .container::before {
     content: "min-width: 90em";
   }
-  
 
   .font__interaction {
     width: 75vw;
@@ -1577,6 +1576,40 @@ h2 {
 
   .menu__item--special:hover {
     background-color: var(--rustRed_dark);
+    cursor: grabbing;
+  }
+
+  .hero__wrapper {
+    flex-direction: row;
+    margin-block-start: -3rem;
+    height: 100%;
+  }
+
+  .title__wrapper> :nth-child(1) {
+    font-size: 5rem;
+  }
+
+  .title__wrapper> :nth-child(2) {
+    margin-inline-start: -2rem;
+  }
+
+  .header__img--idk{
+    width: 25rem;
+  }
+
+  .accent__text {
+    display: flex;
+    flex-direction: column;
+    width: 9rem;
+  }
+
+  .right__word {
+    text-align: right;
+  }
+
+  .accent__text--first {
+    line-height: 140%;
+    margin-block-start: 0
   }
 
   .font__section {
@@ -1601,21 +1634,6 @@ h2 {
     width: 50%;
   }
 
-  .hero__wrapper {
-    flex-direction: row;
-    margin-block-start: -3rem;
-    height: 100%;
-  }
-
-  .accent__text {
-    display: flex;
-    flex-direction: column;
-    width: 9rem;
-  }
-
-  .right__word {
-    text-align: right;
-  }
 }
 
 @media only screen and (min-width: 90em) {
