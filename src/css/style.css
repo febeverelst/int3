@@ -33,6 +33,10 @@ body {
   background-color: var(--fujiSnow);
 }
 
+h2, h3{
+  color: var(--rustyRed);
+}
+
 .visiblity-hidden {
   visibility: hidden;
 }
@@ -317,6 +321,8 @@ h2 {
   border-radius: 0.6rem;
   backface-visibility: hidden;
   box-sizing: border-box;
+  box-shadow: 6px 14px 11px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
 }
 
 .flipcard__front {
@@ -378,6 +384,8 @@ h2 {
   border: 10px solid var(--warmCopper);
   position: relative;
   padding: 1rem;
+  box-shadow: 6px 14px 11px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
 }
 
 .leather__overlay {
@@ -679,12 +687,36 @@ h2 {
   font-size: 0.8rem;
 }
 
+.bible__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.flipcard--bible {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flipcard__front--bible,
+.flipcard__back--bible {
+  width: fit-content;
+  height: fit-content;
+}
+
+.flipcard__front--bible {
+  padding: 1rem;
+}
+
 .bible__title {
   font-family: var(--garamond);
   font-size: 2.1875rem;
   font-weight: 700;
   text-transform: capitalize;
   text-align: center;
+  margin-block-start: 3rem;
 }
 
 .bible__description {
@@ -695,10 +727,16 @@ h2 {
 
 .bible__keyword--title {
   font-family: var(--inter);
+  color: var(--eerieBlack);
   text-transform: uppercase;
   font-weight: 900;
   font-size: 2.875rem;
   letter-spacing: -0.31625rem;
+}
+
+.card__cta--bible{
+  font-size: 1rem;
+  margin-block-end: -1.5rem;
 }
 
 .campaign {
@@ -1402,7 +1440,22 @@ h2 {
     margin-block-end: .5rem;
   }
 
+  .divider__group--fame {
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+  }
 
+  .card__cta--bible {
+    padding-block-end: 0;
+  }
+
+  .bible__title{
+    margin-block-start: 3rem;
+  }
+
+  .bible__description{
+    width: 65vw;
+  }
 
   .carousel,
   .carousel__item,
