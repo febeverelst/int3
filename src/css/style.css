@@ -1125,6 +1125,18 @@ h2 {
   .turmoil__text{
     opacity: 1;
   } */
+
+  .card__cta--bible {
+    text-align: center;
+  }
+
+  .flipcard__front--image {
+    width: 20rem;
+  }
+
+  .flipcard__back--image {
+    width: 20rem;
+  }
 }
 
 @media only screen and (min-width: 51em) {
