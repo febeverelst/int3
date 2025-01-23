@@ -1142,6 +1142,28 @@ h2 {
   .flipcard__back--image {
     width: 20rem;
   }
+
+  .bible__keywords {
+    margin-block-start: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bible__keyword--item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bible__keyword--title{
+    font-size: 4rem;
+  }
+
+  .bible__keyword-description{
+    width: 90vw;
+  }
+
 }
 
 @media only screen and (min-width: 51em) {
@@ -1984,7 +2006,8 @@ h2 {
   .bible__description {
     width: 87%;
   }
-  .card__cta--bible{
+
+  .card__cta--bible {
     padding-block-end: 3rem;
   }
 }
