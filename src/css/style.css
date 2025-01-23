@@ -1205,6 +1205,11 @@ h2 {
     margin-inline-end: 5rem;
   }
 
+  .binder__divider--group {
+    margin-inline-start: 2rem;
+    margin-inline-end: 2rem;
+  }
+
   .divider__text--big {
     font-size: 5rem;
     letter-spacing: -0.55rem;
@@ -1288,6 +1293,71 @@ h2 {
     line-height: 160%;
   }
 
+  .printer__divider {
+    margin-block-start: 3rem;
+  }
+
+  .printer__divider>.divider__group {
+    margin-inline-start: 1rem;
+    margin-inline-end: 1rem;
+  }
+
+  .roller__img {
+    width: 10rem;
+    top: -18rem;
+  }
+
+  .printing__quote {
+    font-size: 2.5rem;
+  }
+
+  .printing__quote::before {
+    font-size: 6rem;
+    top: -1.5rem;
+    left: 1rem;
+  }
+
+  .printing__quote::after {
+    font-size: 6rem;
+    top: -1.5rem;
+    right: 1rem;
+  }
+
+  .printing__picture--image {
+    height: 60vh;
+    margin-inline-start: 0rem;
+  }
+
+  .printing__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .printing__keywords {
+    margin-block-start: 0;
+  }
+
+  .printing__keyword {
+    margin-block-end: 0;
+  }
+
+  .printing__text-content {
+    height: 100%;
+    width: 50vw;
+  }
+
+  .printing {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-block-start: 2rem;
+  }
+
+  .printing__bodycopy{
+    margin-block-start: 1rem;
+  }
+
   .carousel,
   .carousel__item,
   .campaign__content,
@@ -1368,10 +1438,6 @@ h2 {
 @media only screen and (min-width: 90em) {
   .container::before {
     content: "min-width: 90em";
-  }
-
-  .header__wrapper {
-    height: ;
   }
 
   .hero__wrapper {
