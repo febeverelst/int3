@@ -675,6 +675,82 @@ h2 {
   text-transform: capitalize;
 }
 
+
+.turmoil__title {
+  font-size: 2rem;
+  text-align: center;
+  margin-block-end: 1rem;
+}
+
+.turmoil__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.turmoil__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.turmoil__image-wrapper {
+  position: relative;
+  max-width: 100%;
+}
+
+.turmoil__img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.turmoil__text {
+  position: absolute;
+  /* Position text on top of the image */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #f1efe9;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.turmoil__bodycopy {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0;
+}
+
+.turmoil__image-wrapper:hover .turmoil__text {
+  opacity: 1;
+}
+
+.turmoil__button {
+  background-color: #b12e0a;
+  color: #f1efe9;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+.turmoil__button:hover {
+  background-color: #9c2606;
+}
+
+
 .divider__fame {
   gap: .5rem;
 }
@@ -1044,6 +1120,11 @@ h2 {
   .font__interaction {
     width: 100vw;
   }
+
+  /* this will be with javascript -> when the image is in the middle, the opacity will change to 1
+  .turmoil__text{
+    opacity: 1;
+  } */
 }
 
 @media only screen and (min-width: 51em) {
