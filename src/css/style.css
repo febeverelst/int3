@@ -1529,6 +1529,7 @@ h2 {
     content: "min-width: 90em";
   }
 
+
   .font__interaction {
     width: 75vw;
     position: absolute;
@@ -1582,7 +1583,7 @@ h2 {
   .hero__wrapper {
     flex-direction: row;
     margin-block-start: -3rem;
-    height: 100%;
+    height: 90%;
   }
 
   .title__wrapper> :nth-child(1) {
@@ -1593,8 +1594,16 @@ h2 {
     margin-inline-start: -2rem;
   }
 
-  .header__img--idk{
+  .title__wrapper> :nth-child(4) {
+    margin-inline-start: 3rem;
+  }
+
+  .header__img--idk {
     width: 25rem;
+  }
+
+  .cta {
+    margin-block-start: -4rem;
   }
 
   .accent__text {
@@ -1610,6 +1619,60 @@ h2 {
   .accent__text--first {
     line-height: 140%;
     margin-block-start: 0
+  }
+
+  .book__binding {
+    height: auto;
+    margin-block-start: 2rem;
+  }
+
+  .book__binding--image-container {
+    margin-block-start: 0;
+  }
+
+  .book__binding--image {
+    width: 60vw;
+  }
+
+  .book__binding--text {
+    width: 51vw;
+  }
+
+  .book__binding--button {
+    background-image: url("../assets/svg/uncheckedButtonBig.svg");
+    background-size: 12rem;
+    width: 12rem;
+    font-size: 1.2rem;
+  }
+
+  .step1 {
+    top: 0;
+    right: 0;
+  }
+
+  .step2 {
+    bottom: 12%;
+    left: 0;
+  }
+
+  .step3 {
+    bottom: 5%;
+    right: 0;
+  }
+
+  .step4 {
+    top: 35%;
+    left: -15%;
+  }
+
+  .step5 {
+    top: 0;
+    left: 2rem;
+  }
+
+  .step6 {
+    top: 45%;
+    right: -20%;
   }
 
   .font__section {
@@ -1643,7 +1706,7 @@ h2 {
 
   .hero__wrapper {
     flex-direction: row;
-    margin-block-start: -3rem;
+    margin-block-start: -5rem;
     height: 100%;
   }
 
@@ -1655,10 +1718,6 @@ h2 {
 
   .right__word {
     text-align: right;
-  }
-
-  .cta {
-    margin-block-start: -3rem;
   }
 
   .book__binding {
