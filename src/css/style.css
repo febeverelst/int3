@@ -513,7 +513,7 @@ h2 {
 }
 
 .injury__section--text {
-  color: #ECCDB8;
+  color: #d1b5a2;
   margin-inline-start: 1.7rem;
   margin-inline-end: 1.7rem;
 }
@@ -1383,6 +1383,7 @@ h2 {
   .printing__text-content {
     height: 100%;
     width: 50vw;
+    margin-block-start: 10rem;
   }
 
   .printing {
@@ -1567,6 +1568,56 @@ h2 {
   .font__bodycopy {
     width: 45%;
   }
+
+  .injury__section {
+    height: 100vh;
+  }
+
+  .leather__overlay--injury {
+    background-image: url("../assets/jpeg/leatherTextureDesktop.jpg");
+  }
+
+  .injury__section--text {
+    width: 60vw;
+  }
+
+  .printing {
+    position: relative;
+  }
+
+  .printing__quote {
+    position: absolute;
+    left: 10rem;
+    right: 10rem;
+  }
+
+  .printing__content {
+    margin-block-start: 5rem;
+  }
+
+  .printing__picture--image {
+    height: 50rem;
+  }
+
+  .printing__keyword {
+    text-align: center;
+    font-size: 5rem;
+    letter-spacing: -0.55rem;
+  }
+
+  .right__keyword {
+    margin-inline-start: 1rem;
+  }
+
+  .left__keyword {
+    margin-inline-end: 3rem;
+    margin-inline-start: -3rem;
+  }
+
+  .printing__bodycopy {
+    margin-inline-start: -.5rem;
+  }
+
 }
 
 @media only screen and (min-width: 78em) {
@@ -1694,8 +1745,6 @@ h2 {
     right: -20%;
   }
 
-
-
   .font__section {
     width: 90vw;
     height: 23rem;
@@ -1716,6 +1765,24 @@ h2 {
 
   .font__bodycopy {
     width: 50%;
+  }
+
+  .injury__section--text {
+    width: 50vw;
+  }
+
+  .printing__quote {
+    position: absolute;
+    left: 15rem;
+    right: 15rem;
+  }
+
+  .printing__picture--image {
+    height: 55rem;
+  }
+
+  .printing__bodycopy {
+    margin-inline-start: 3rem;
   }
 
 }
@@ -1743,5 +1810,17 @@ h2 {
 
   .book__binding {
     margin-block-start: 8rem;
+  }
+
+  .injury__section--text {
+    width: 45vw;
+  }
+
+  .printing__picture--image {
+    height: 55rem;
+  }
+
+  .printing__bodycopy {
+    margin-inline-start: 6.5rem;
   }
 }
