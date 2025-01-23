@@ -31,9 +31,18 @@
 
 body {
   background-color: var(--fujiSnow);
+  display: flex;
+  flex-direction: column;
 }
 
-h2, h3{
+main{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+h2,
+h3 {
   color: var(--rustyRed);
 }
 
@@ -734,7 +743,7 @@ h2 {
   letter-spacing: -0.31625rem;
 }
 
-.card__cta--bible{
+.card__cta--bible {
   font-size: 1rem;
   margin-block-end: -1.5rem;
 }
@@ -1449,13 +1458,50 @@ h2 {
     padding-block-end: 0;
   }
 
-  .bible__title{
+  .bible__title {
     margin-block-start: 3rem;
   }
 
-  .bible__description{
+  .bible__description {
     width: 65vw;
   }
+
+  .bible__keyword--title {
+    font-size: 6.5rem;
+    letter-spacing: -0.55rem;
+  }
+
+  .bible__keywords {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .bible__keyword--item {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    width: fit-content;
+    gap: 1rem;
+  }
+
+  .keyword__right {
+    margin-inline-start: 5rem;
+  }
+
+  .keyword__left {
+    margin-inline-end: 5rem;
+  }
+
+  .bible__keyword-description {
+    margin-inline-start: 2rem;
+    width: 50vw;
+  }
+
+
+
+
 
   .carousel,
   .carousel__item,
