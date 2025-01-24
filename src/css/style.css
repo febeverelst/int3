@@ -33,7 +33,7 @@ body {
   background-color: var(--fujiSnow);
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  /* gap: 1rem; */
 }
 
 main {
@@ -49,6 +49,13 @@ h3 {
 
 .visiblity-hidden {
   visibility: hidden;
+}
+
+.progress__bar{
+  --progress: 0;
+  height: 6px;
+  width: var(--progress);
+  background-color: var(--rustyRed);
 }
 
 .nav__wrapper {

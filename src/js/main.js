@@ -2,6 +2,12 @@ const flipcardContainers = document.querySelectorAll('.flipcard__container');
 const carouselItems = document.querySelectorAll('.carousel__item');
 const buttons = document.querySelectorAll('.pagination-btn');
 
+
+// funtion comparing total height to pos
+// updating progress variable
+// event listener for scroll
+document.addEventListener('scroll', updateProgressBar)
+
 const flipCard = (container, event) => {
     if (!event.target.closest('.flipcard__button')) {
         container.querySelector('.flipcard').classList.toggle('flipped');
