@@ -1,5 +1,5 @@
 // funtion comparing total height to pos
-function updateProgressBar() {
+export const updateProgressBar = () => {
     const { scrollTop, scrollHeight } = document.documentElement;
     const scrollPercent = `${(scrollTop / (scrollHeight - window.innerHeight)) * 100}%`;
     console.log(scrollPercent);
@@ -10,4 +10,4 @@ function updateProgressBar() {
 
 
 // event listener for scroll
-document.addEventListener('scroll', updateProgressBar)
+document.addEventListener('scroll', updateProgressBar);

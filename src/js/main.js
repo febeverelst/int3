@@ -1,4 +1,5 @@
 import { initHamburger } from './hamburger.js';
+import { updateProgressBar } from './progress.js';
 
 const flipcardContainers = document.querySelectorAll('.flipcard__container');
 const carouselItems = document.querySelectorAll('.carousel__item');
@@ -48,12 +49,13 @@ const resetCarouselItems = () => {
 
 
 const init = () =>{
-    initHamburger();
     window.addEventListener('resize', resetCarouselItems);
     resetCarouselItems();
     carouselItems[0].classList.add('active');
     buttons[0].classList.add('active');
-
+    
+    initHamburger();
+    updateProgressBar();
 }
 
 init();
