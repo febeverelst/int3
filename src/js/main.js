@@ -1,15 +1,10 @@
 import { initHamburger } from './hamburger.js';
 import { updateProgressBar } from './progress.js';
+import { minigame } from './minigame.js';
 
 const flipcardContainers = document.querySelectorAll('.flipcard__container');
 const carouselItems = document.querySelectorAll('.carousel__item');
 const buttons = document.querySelectorAll('.pagination-btn');
-
-
-// funtion comparing total height to pos
-// updating progress variable
-// event listener for scroll
-// document.addEventListener('scroll', updateProgressBar)
 
 const flipCard = (container, event) => {
     if (!event.target.closest('.flipcard__button')) {
@@ -49,6 +44,8 @@ const resetCarouselItems = () => {
 
 
 const init = () =>{
+    gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.defaults({ markers: { startColor: "green", endColor: "red" } });
     window.addEventListener('resize', resetCarouselItems);
     resetCarouselItems();
     carouselItems[0].classList.add('active');
@@ -56,6 +53,9 @@ const init = () =>{
     
     initHamburger();
     updateProgressBar();
+    minigame();
+
+    console.log(gsap.version);
 }
 
 init();
