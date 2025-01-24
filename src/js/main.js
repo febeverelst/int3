@@ -1,3 +1,5 @@
+import { initHamburger } from './hamburger.js';
+
 const flipcardContainers = document.querySelectorAll('.flipcard__container');
 const carouselItems = document.querySelectorAll('.carousel__item');
 const buttons = document.querySelectorAll('.pagination-btn');
@@ -6,7 +8,7 @@ const buttons = document.querySelectorAll('.pagination-btn');
 // funtion comparing total height to pos
 // updating progress variable
 // event listener for scroll
-document.addEventListener('scroll', updateProgressBar)
+// document.addEventListener('scroll', updateProgressBar)
 
 const flipCard = (container, event) => {
     if (!event.target.closest('.flipcard__button')) {
@@ -46,6 +48,7 @@ const resetCarouselItems = () => {
 
 
 const init = () =>{
+    initHamburger();
     window.addEventListener('resize', resetCarouselItems);
     resetCarouselItems();
     carouselItems[0].classList.add('active');

@@ -51,11 +51,15 @@ h3 {
   visibility: hidden;
 }
 
-.progress__bar{
+.progress__bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
   --progress: 0;
   height: 6px;
   width: var(--progress);
-  background-color: var(--rustyRed);
+  background-color: var(--rustRed_dark);
 }
 
 .nav__wrapper {
@@ -1163,11 +1167,11 @@ h2 {
     align-items: center;
   }
 
-  .bible__keyword--title{
+  .bible__keyword--title {
     font-size: 4rem;
   }
 
-  .bible__keyword-description{
+  .bible__keyword-description {
     width: 90vw;
   }
 
