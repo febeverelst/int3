@@ -1,5 +1,5 @@
 import { initHamburger } from './hamburger.js';
-import { updateProgressBar } from './progress.js';
+import { updateProgressBar, countdown } from './progress.js';
 import { minigame } from './minigame.js';
 import { typeQuote, printingKeywords } from './gsap.js';
 
@@ -53,6 +53,7 @@ const init = () => {
 
     initHamburger();
     updateProgressBar();
+    countdown();
     minigame();
     typeQuote();
     printingKeywords();
