@@ -1284,6 +1284,13 @@ h2 {
     width: 90vw;
   }
 
+  .keyword__opportunity--title {
+    font-size: 3.5rem;
+  }
+
+  .keyword__perseverance--title{
+    font-size: 3.3rem;
+  }
 }
 
 @media only screen and (min-width: 51em) {
@@ -1730,7 +1737,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: 3rem;
   }
 
   .bible__keyword--item {
