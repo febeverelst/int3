@@ -1,7 +1,7 @@
 import { initHamburger } from './hamburger.js';
 import { updateProgressBar } from './progress.js';
 import { minigame } from './minigame.js';
-import { typeQuote } from './gsap.js';
+import { typeQuote, printingKeywords } from './gsap.js';
 
 const flipcardContainers = document.querySelectorAll('.flipcard__container');
 const carouselItems = document.querySelectorAll('.carousel__item');
@@ -55,6 +55,7 @@ const init = () => {
     updateProgressBar();
     minigame();
     typeQuote();
+    printingKeywords();
 
     console.log(gsap.version);
 }

@@ -609,6 +609,7 @@ h2 {
 }
 
 .printing__quote {
+  opacity: 0;
   text-align: center;
   font-family: var(--garamond);
   font-size: 1.25rem;
@@ -1867,10 +1868,6 @@ h2 {
 
   .printing__bodycopy {
     margin-inline-start: -.5rem;
-  }
-
-  .printing__quote{
-    
   }
 
   .bible__content {

@@ -1,29 +1,72 @@
-const typewriterEffect = (selector) => {
-    const element = document.querySelector(selector);
-    if (!element) return;
+export const typeQuote = () => {
+    let tlQuote = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".printing__quote",
+            start: "top center+=30%",
+            end: "bottom center",
+            scrub: true,
+            markers: true
+        }
+    });
 
-    const text = element.innerText;
-    const words = text.split(" ");
-    element.innerHTML = words.map((word) => `<span>${word}</span>`).join(" ");
 
-    gsap.from(`${selector} span`, {
-        duration: 1,
-        opacity: 0,
-        x: -20,
-        stagger: {
-            each: 0.05,
-            from: "start",
+    const printingQuote = document.querySelector(".printing__quote");
+    const fullQuote = printingQuote.innerText;
+
+    tlQuote.fromTo(printingQuote,
+        {
+            textContent: "",
+
         },
-        ease: "power4.inOut",
+        {
+            opacity: "100%",
+            textContent: fullQuote,
+            onUpdate: function () {
+                printingQuote.innerHTML = fullQuote.slice(0, Math.ceil(this.progress() * fullQuote.length));
+            }
+        });
+}
+
+
+export const printingKeywords = () => {
+    const keywords = document.querySelectorAll(".printing__keyword"); // Select all keywords
+    let tlPrintKey = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".printing__keywords",
+            start: "top bottom-=30%",
+            end: "bottom bottom-=35%",
+            scrub: 1.5,
+            markers: true
+        },
+    });
+
+
+    keywords.forEach((keyword) => {
+        if (keyword.classList.contains("right__keyword")) {
+            tlPrintKey.fromTo(
+                keyword,
+                { 
+                    x: "-20%", 
+                    opacity: 0 }, 
+                { 
+                    x: "0%", 
+                    opacity: 1,  
+                },
+            );
+        } else if (keyword.classList.contains("left__keyword")) {
+            tlPrintKey.fromTo(
+                keyword,
+                {
+                    x: "50%",
+                    opacity: 0
+                }, // Start off-screen to the right
+                {
+                    x: "0%",
+                    opacity: 1,
+                }, // Animate to its final position
+            );
+        }
     });
 };
 
-export const typeQuote = () => {
-    ScrollTrigger.create({
-        trigger: ".printing__quote",
-        start: "bottom bottom",
-        onEnter: () => typewriterEffect(".printing__quote"),
-        once: true
-    });
-}
 
