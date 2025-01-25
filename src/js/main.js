@@ -1,6 +1,7 @@
 import { initHamburger } from './hamburger.js';
 import { updateProgressBar } from './progress.js';
 import { minigame } from './minigame.js';
+import { typeQuote } from './gsap.js';
 
 const flipcardContainers = document.querySelectorAll('.flipcard__container');
 const carouselItems = document.querySelectorAll('.carousel__item');
@@ -43,17 +44,17 @@ const resetCarouselItems = () => {
 };
 
 
-const init = () =>{
+const init = () => {
     gsap.registerPlugin(ScrollTrigger);
-    ScrollTrigger.defaults({ markers: { startColor: "green", endColor: "red" } });
     window.addEventListener('resize', resetCarouselItems);
     resetCarouselItems();
     carouselItems[0].classList.add('active');
     buttons[0].classList.add('active');
-    
+
     initHamburger();
     updateProgressBar();
     minigame();
+    typeQuote();
 
     console.log(gsap.version);
 }

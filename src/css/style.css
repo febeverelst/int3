@@ -1578,19 +1578,20 @@ h2 {
 
   .printing__quote::before {
     font-size: 6rem;
-    top: -1.5rem;
+    top: -3.5rem;
     left: 1rem;
   }
 
   .printing__quote::after {
     font-size: 6rem;
-    top: -1.5rem;
+    top: -3.5rem;
     right: 1rem;
   }
 
   .printing__picture--image {
     height: 60vh;
     margin-inline-start: 0rem;
+    animation: bounce 3s ease-in-out infinite;
   }
 
   .printing__content {
@@ -1866,6 +1867,10 @@ h2 {
 
   .printing__bodycopy {
     margin-inline-start: -.5rem;
+  }
+
+  .printing__quote{
+    
   }
 
   .bible__content {
