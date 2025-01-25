@@ -750,7 +750,14 @@ h2 {
 
 .turmoil {
   position: relative;
+  /* height: 60vh; */
   z-index: 0;
+  padding-block-start: 3rem;
+  padding-block-end: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
 }
 
 .turmoil::before {
@@ -764,8 +771,9 @@ h2 {
   mix-blend-mode: overlay;
   z-index: -1;
   pointer-events: none;
-  opacity: 0%;
+  opacity: 25%;
 }
+
 
 .turmoil__title {
   font-size: 2rem;
@@ -828,17 +836,16 @@ h2 {
 }
 
 .turmoil__button {
-  background-color: #b12e0a;
-  color: #f1efe9;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 2rem;
+  background-image: url("../assets/svg/buttonSmall.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10rem;
+  width: 10rem;
+  height: 3.7rem;
 }
 
 .turmoil__button:hover {
-  background-color: #9c2606;
+  transform: scale(1.05);
 }
 
 
@@ -1926,16 +1933,9 @@ h2 {
   }
 
   .turmoil__content {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    overflow: hidden;
-  }
-
-  .turmoil__item{
-    height: 20rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
   }
 }
 
