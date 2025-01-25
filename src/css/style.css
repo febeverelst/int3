@@ -748,6 +748,24 @@ h2 {
   text-transform: capitalize;
 }
 
+.turmoil {
+  position: relative;
+  z-index: 0;
+}
+
+.turmoil::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* Fills the entire section */
+  background-image: url("../assets/avif/turmoilBg.avif");
+  /* background-size: cover; */
+  background-position: center;
+  mix-blend-mode: overlay;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0%;
+}
 
 .turmoil__title {
   font-size: 2rem;
@@ -1905,6 +1923,19 @@ h2 {
 
   .bible__title {
     margin-block-start: 0;
+  }
+
+  .turmoil__content {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow: hidden;
+  }
+
+  .turmoil__item{
+    height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
