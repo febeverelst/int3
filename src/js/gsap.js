@@ -2,10 +2,10 @@ export const typeQuote = () => {
     let tlQuote = gsap.timeline({
         scrollTrigger: {
             trigger: ".printing__quote",
-            start: "top center+=30%",
-            end: "bottom center",
+            start: "top center",
+            end: "bottom center-=30%",
             scrub: true,
-            // markers: true
+            markers: true
         }
     });
 
@@ -33,8 +33,8 @@ export const printingKeywords = () => {
     let tl = gsap.timeline({
         scrollTrigger: {
             trigger: ".printing__keywords",
-            start: "top bottom-=30%",
-            end: "bottom bottom-=35%",
+            start: "top top+=15%",
+            end: "bottom top+=15%",
             scrub: 1.5,
             // markers: true
         },
@@ -188,8 +188,8 @@ export const stackingCards = () => {
         { 
             y: "0%", 
             opacity: 1, 
-            duration: 3,
-            stagger: 5 
+            duration: 5,
+            stagger: 10 
         }
     );
 };

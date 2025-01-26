@@ -487,7 +487,7 @@ h2 {
   flex-direction: column;
   align-items: center;
   position: relative;
-  height: 80vh;
+  height: 70vh;
   width: 90vw;
 }
 
@@ -553,7 +553,6 @@ h2 {
   height: 100vh;
   width: 100vw;
   position: relative;
-  /* margin: 0 auto; */
 }
 
 .leather__overlay--injury {
@@ -578,7 +577,15 @@ h2 {
   text-align: center;
   color: var(--fujiSnow);
   margin-block-start: 4rem;
+}
+
+.injury__section--subtitle {
+  color: var(--fujiSnow);
   margin-block-end: 3rem;
+  text-align: center;
+  font-size: 1.6rem;
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
 }
 
 .injury__section--wrapper {
@@ -1323,6 +1330,10 @@ h2 {
   .keyword__perseverance--title {
     font-size: 3.3rem;
   }
+
+  .footer{
+    height: 100%;
+  } 
 }
 
 @media only screen and (min-width: 51em) {
@@ -1604,7 +1615,7 @@ h2 {
   }
 
   .injury__section {
-    height: 75vh;
+    height: 80vh;
   }
 
   .injury__section--wrapper {
@@ -1616,8 +1627,8 @@ h2 {
 
   .injury__section--title {
     font-size: 3rem;
-
   }
+  .injury__section--subtitle{}
 
   .injury__section--text {
     width: 75vw;

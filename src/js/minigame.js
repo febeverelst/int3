@@ -43,8 +43,6 @@ export const minigame = () => {
         }
         cycle(); // Restart the cycle
     }
-
-    // Function to check if the game is completed
     const checkGameCompletion = () => {
     const allDisabled = Array.from(checkboxes).every(checkbox => checkbox.disabled);
     if (allDisabled) {
@@ -52,16 +50,13 @@ export const minigame = () => {
         successMessage.textContent = "Nailed it! You're a true bookbinder like Plantin!";
         successMessage.className = "success-message"; // Add a class for styling
 
-        // Find the book__binding--image-container div and append the success message to it
         const imageContainer = document.querySelector(".book__binding--image-container");
         if (imageContainer) {
             imageContainer.appendChild(successMessage);
 
-            // Check screen width and apply the correct top positioning
             const screenWidth = window.innerWidth || document.documentElement.clientWidth;
             const topPosition = (screenWidth === 23 * 16) ? "150%" : "40%";  // 23em is 368px, so we compare to 368px
 
-            // Apply the styles
             successMessage.style.position = "absolute";
             successMessage.style.top = topPosition;
             successMessage.style.background = "var(--rustyRed)";
@@ -77,12 +72,10 @@ export const minigame = () => {
 }
 
 
-    // Add event listeners to checkboxes
     checkboxes.forEach(checkbox => {
         checkbox.addEventListener("change", e => {
             const clickedStep = parseInt(e.target.getAttribute("data-step"), 10);
 
-            // Check if the previous checkbox is checked
             if (clickedStep > 1) {
                 const previousCheckbox = document.querySelector(
                     `.book__binding--checkbox[data-step="${clickedStep - 1}"]`
@@ -96,12 +89,11 @@ export const minigame = () => {
                     button.addEventListener("animationend", () => {
                         button.classList.remove("shake");
                     }, { once: true });
-                    resetInactivityTimer(); // Reset the timer on incorrect interaction
-                    return; // Exit the function if the wrong checkbox is checked
+                    resetInactivityTimer(); 
+                    return; 
                 }
             }
 
-            // If the correct checkbox is checked, move to the next step
             if (clickedStep === currentStep) {
                 e.target.disabled = true;
                 currentStep++;
