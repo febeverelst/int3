@@ -5,7 +5,7 @@ export const typeQuote = () => {
             start: "top center",
             end: "bottom center-=30%",
             scrub: true,
-            markers: true
+            // markers: true
         }
     });
 
