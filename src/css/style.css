@@ -544,7 +544,7 @@ h2 {
   background-color: var(--eerieBlack);
   background-image: url("../assets/avif/textureTile.avif");
   height: 100vh;
-  width: 100vw;
+  /* width: 100vw; */
   position: relative;
 }
 
@@ -1145,9 +1145,6 @@ h2 {
 
 
 @media only screen and (min-width: 23em) {
-  .container::before {
-    content: "min-width: 23em";
-  }
 
   .museum__logo {
     width: 5rem;
@@ -1294,9 +1291,6 @@ h2 {
 }
 
 @media only screen and (min-width: 51em) {
-  .container::before {
-    content: "min-width: 52em";
-  }
 
   .hero__wrapper>div:nth-of-type(3)>p.accent__text {
     display: block;
@@ -1819,9 +1813,6 @@ h2 {
 }
 
 @media only screen and (min-width: 65em) {
-  .container::before {
-    content: "min-width: 90em";
-  }
 
 
   .font__interaction {
@@ -1953,9 +1944,6 @@ h2 {
 }
 
 @media only screen and (min-width: 78em) {
-  .container::before {
-    content: "min-width: 90em";
-  }
 
   .header__texture--back {
     background-image: url("../assets/jpeg/callyTextureDesktop.jpg");
@@ -2138,9 +2126,12 @@ h2 {
 }
 
 @media only screen and (min-width: 90em) {
-  .container::before {
-    content: "min-width: 90em";
-  }
+  .container {
+      max-width: 90em;
+      /* Set a maximum width for the container */
+      margin: 0 auto;
+      /* Centers the container horizontally */
+    }
 
   .hero__wrapper {
     flex-direction: row;
