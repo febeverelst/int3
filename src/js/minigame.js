@@ -46,31 +46,36 @@ export const minigame = () => {
 
     // Function to check if the game is completed
     const checkGameCompletion = () => {
-        const allDisabled = Array.from(checkboxes).every(checkbox => checkbox.disabled);
-        if (allDisabled) {
-            const successMessage = document.createElement("div");
-            successMessage.textContent = "Congratulations! You're a true bookbinder like Plantin!";
-            successMessage.className = "success-message"; // Add a class for styling
+    const allDisabled = Array.from(checkboxes).every(checkbox => checkbox.disabled);
+    if (allDisabled) {
+        const successMessage = document.createElement("div");
+        successMessage.textContent = "Nailed it! You're a true bookbinder like Plantin!";
+        successMessage.className = "success-message"; // Add a class for styling
 
-            // Find the book__binding--image-container div and append the success message to it
-            const imageContainer = document.querySelector(".book__binding--image-container");
-            if (imageContainer) {
-                imageContainer.appendChild(successMessage);
+        // Find the book__binding--image-container div and append the success message to it
+        const imageContainer = document.querySelector(".book__binding--image-container");
+        if (imageContainer) {
+            imageContainer.appendChild(successMessage);
 
-                // Add animation or styling for the success message
-                successMessage.style.position = "absolute";
-                successMessage.style.top = "40%";                
-                successMessage.style.background = "var(--rustyRed)";
-                successMessage.style.color = "white";
-                successMessage.style.padding = "20px";
-                successMessage.style.borderRadius = "10px";
-                successMessage.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
-                successMessage.style.fontSize = "1.5rem";
-                successMessage.style.textAlign = "center";
-                successMessage.style.animation = "bounce 5s ease-in-out infinite";
-            }
+            // Check screen width and apply the correct top positioning
+            const screenWidth = window.innerWidth || document.documentElement.clientWidth;
+            const topPosition = (screenWidth === 23 * 16) ? "150%" : "40%";  // 23em is 368px, so we compare to 368px
+
+            // Apply the styles
+            successMessage.style.position = "absolute";
+            successMessage.style.top = topPosition;
+            successMessage.style.background = "var(--rustyRed)";
+            successMessage.style.color = "white";
+            successMessage.style.padding = "20px";
+            successMessage.style.borderRadius = "10px";
+            successMessage.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
+            successMessage.style.fontSize = "1.5rem";
+            successMessage.style.textAlign = "center";
+            successMessage.style.animation = "bounce 5s ease-in-out infinite";
         }
     }
+}
+
 
     // Add event listeners to checkboxes
     checkboxes.forEach(checkbox => {
