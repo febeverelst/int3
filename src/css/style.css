@@ -544,8 +544,9 @@ h2 {
   background-color: var(--eerieBlack);
   background-image: url("../assets/avif/textureTile.avif");
   height: 100vh;
-  /* width: 100vw; */
+  width: 100vw;
   position: relative;
+  /* margin: 0 auto; */
 }
 
 .leather__overlay--injury {
@@ -604,7 +605,7 @@ h2 {
   position: absolute;
   transform: rotate(45deg);
   width: 8rem;
-  top: -15rem;
+  /* top: -15rem; */
   right: -2rem;
 }
 
@@ -750,8 +751,8 @@ h2 {
 
 .turmoil {
   position: relative;
-  /* height: 60vh; */
   z-index: 0;
+  margin-block-start: 3rem;
   padding-block-start: 3rem;
   padding-block-end: 4rem;
   display: flex;
@@ -776,9 +777,20 @@ h2 {
 
 
 .turmoil__title {
-  font-size: 2rem;
+  /* font-size: 2rem; */
   text-align: center;
   margin-block-end: 1rem;
+}
+.turmoil__title--text{
+  padding-block-end: 1rem;
+}
+
+.turmoil__title--description-mobile, .turmoil__title--description-desktop {
+  font-size: 1.2rem;
+}
+
+.turmoil__title--description-desktop{
+  display: none;
 }
 
 .turmoil__content {
@@ -1235,14 +1247,13 @@ h2 {
     top: 2rem;
   }
 
+  .roller__img {
+    display: none;
+  }
+
   .font__interaction {
     width: 100vw;
   }
-
-  /* this will be with javascript -> when the image is in the middle, the opacity will change to 1
-  .turmoil__text{
-    opacity: 1;
-  } */
 
   .card__cta--bible {
     text-align: center;
@@ -1285,7 +1296,7 @@ h2 {
     font-size: 3.5rem;
   }
 
-  .keyword__perseverance--title{
+  .keyword__perseverance--title {
     font-size: 3.3rem;
   }
 }
@@ -1600,11 +1611,6 @@ h2 {
     margin-inline-end: 1rem;
   }
 
-  .roller__img {
-    width: 10rem;
-    top: -18rem;
-  }
-
   .printing__quote {
     font-size: 2.5rem;
   }
@@ -1866,6 +1872,31 @@ h2 {
     position: relative;
   }
 
+  .roller__img {
+    display: block;
+    width: 10rem;
+    right: 2rem;
+    top: 1rem;
+    animation: bounceRotate 6s ease-in-out infinite;
+  }
+
+  @keyframes bounceRotate {
+    0% {
+      transform: translateY(0) rotate(45deg);
+      transform-origin: right;
+    }
+
+    50% {
+      transform: translateY(-20px) rotate(60deg);
+      transform-origin: center;
+    }
+
+    100% {
+      transform: translateY(0) rotate(45deg);
+      transform-origin: right;
+    }
+  }
+
   .printing__quote {
     position: absolute;
     left: 10rem;
@@ -1940,6 +1971,14 @@ h2 {
     display: flex;
     flex-direction: row;
     gap: 2rem;
+  }
+
+  .turmoil__title--description-mobile{
+    display: none;
+  }
+
+  .turmoil__title--description-desktop{
+    display: block;
   }
 }
 
@@ -2127,11 +2166,11 @@ h2 {
 
 @media only screen and (min-width: 90em) {
   .container {
-      max-width: 90em;
-      /* Set a maximum width for the container */
-      margin: 0 auto;
-      /* Centers the container horizontally */
-    }
+    max-width: 90em;
+    /* Set a maximum width for the container */
+    margin: 0 auto;
+    /* Centers the container horizontally */
+  }
 
   .hero__wrapper {
     flex-direction: row;

@@ -109,3 +109,48 @@ export const bibleKeywords = () => {
         );
     });
 };
+
+export const turmoilPanels = () => {
+    const mediaQuery = window.matchMedia("(max-width: 51em)");
+
+    // Store references to the ScrollTriggers created in this function
+    let scrollTriggers = [];
+
+    if (mediaQuery.matches) {
+        const panels = document.querySelectorAll(".turmoil__item");
+
+        panels.forEach((panel) => {
+            let tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: panel, // Individual trigger for each item
+                    start: "top bottom-=10%",
+                    end: "bottom bottom-=20%",
+                    scrub: 1.5,
+                    // markers: true
+                },
+            });
+
+            tl.fromTo(
+                panel,
+                {
+                    opacity: 0,
+                    x: "-50%"
+                },
+                {
+                    opacity: 1,
+                    x: 0
+                }
+            );
+
+            // Save the ScrollTrigger instance for this timeline
+            scrollTriggers.push(tl.scrollTrigger);
+        });
+    } else {
+        // Kill only the ScrollTriggers created for this function
+        scrollTriggers.forEach((trigger) => trigger.kill());
+        scrollTriggers = []; // Clear the array to avoid re-killing the same triggers
+
+    }
+}
+
+
