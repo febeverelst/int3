@@ -1,7 +1,7 @@
 import { initHamburger } from './hamburger.js';
 import { updateProgressBar, countdown } from './progress.js';
 import { minigame } from './minigame.js';
-import { typeQuote, printingKeywords, bibleKeywords, turmoilPanels } from './gsap.js';
+import { typeQuote, printingKeywords, bibleKeywords, turmoilPanels, stackingCards } from './gsap.js';
 
 const flipcardContainers = document.querySelectorAll('.flipcard__container');
 const carouselItems = document.querySelectorAll('.carousel__item');
@@ -100,6 +100,7 @@ const init = () => {
     turmoilPanels();
     fontInteraction();
     interactSlider();
+    stackingCards();
 
     console.log(gsap.version);
 }

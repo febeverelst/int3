@@ -154,3 +154,42 @@ export const turmoilPanels = () => {
 }
 
 
+
+export const stackingCards = () => {
+    const pinningSection = document.querySelector(".stacking__cards--section");
+    const cards = document.querySelectorAll(".stacking__card");
+
+    if (pinningSection) {
+        ScrollTrigger.create({
+            trigger: pinningSection,
+            start: "top top",
+            end: "bottom center",
+            pin: true,
+            pinSpacing: true,
+            // markers: true, 
+        });
+    }
+
+    let tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: pinningSection, 
+            start: "top top",
+            end: "bottom center",
+            scrub: true,
+        },
+    });
+
+    tl.fromTo(
+        cards,
+        { 
+            y: "100%", 
+            opacity: 0 
+        },
+        { 
+            y: "0%", 
+            opacity: 1, 
+            duration: 3,
+            stagger: 5 
+        }
+    );
+};
