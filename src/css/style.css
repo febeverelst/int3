@@ -196,19 +196,19 @@ header {
   margin-inline-start: -3rem;
 }
 
-    @keyframes bounceHero {
-      0% {
-        transform: translateY(0);
-      }
-  
-      50% {
-        transform: translateY(-10px);
-      }
-  
-      100% {
-        transform: translateY(0);
-      }
-    }
+@keyframes bounceHero {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
 
 .title__wrapper {
   display: flex;
@@ -1044,8 +1044,8 @@ h2 {
   height: 3rem;
   background-color: var(--fujiSnow);
   display: flex;
+  justify-content: center;
   align-items: center;
-  padding-inline-start: 1.25rem;
   gap: .5rem;
 }
 
@@ -1354,9 +1354,18 @@ h2 {
     font-size: 3.3rem;
   }
 
-  .footer{
+  
+  .campaign__date {
+    font-size: .9rem;
+  }
+  
+  .campaign__date--active{
+    font-size: 1.2rem;
+    text-decoration: underline;
+  }
+  .footer {
     height: 100%;
-  } 
+  }
 }
 
 @media only screen and (min-width: 51em) {
@@ -1651,7 +1660,8 @@ h2 {
   .injury__section--title {
     font-size: 3rem;
   }
-  .injury__section--subtitle{}
+
+  .injury__section--subtitle {}
 
   .injury__section--text {
     width: 75vw;
