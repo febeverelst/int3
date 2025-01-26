@@ -29,6 +29,13 @@
   --inter: "Inter", sans-serif;
 }
 
+@font-face {
+  font-family: 'Plantin';
+  src: url('../assets/font/PlantinHeadlineMTPro-MediumCn.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   background-color: var(--fujiSnow);
   display: flex;
@@ -728,6 +735,8 @@ h2 {
   padding-inline-start: .5rem;
   margin-block-start: 1.9rem;
   margin-block-end: 1.9rem;
+  font-family: var(--inter);
+  font-size: 1.5rem;
 }
 
 .font__buttons {
@@ -747,6 +756,19 @@ h2 {
   font-size: 1.3rem;
   font-weight: 700;
   text-transform: capitalize;
+}
+
+.font__button:hover {
+  filter: brightness(0.85);
+  cursor: pointer;
+}
+
+.font__button--plantin {
+  font-family: 'Plantin', serif;
+}
+
+.font__button--garamond {
+  font-family: var(--garamond);
 }
 
 .turmoil {
@@ -781,15 +803,17 @@ h2 {
   text-align: center;
   margin-block-end: 1rem;
 }
-.turmoil__title--text{
+
+.turmoil__title--text {
   padding-block-end: 1rem;
 }
 
-.turmoil__title--description-mobile, .turmoil__title--description-desktop {
+.turmoil__title--description-mobile,
+.turmoil__title--description-desktop {
   font-size: 1.2rem;
 }
 
-.turmoil__title--description-desktop{
+.turmoil__title--description-desktop {
   display: none;
 }
 
@@ -1684,11 +1708,37 @@ h2 {
     margin-block-end: 3rem;
   }
 
+  @keyframes slideHint {
+
+    0%,
+    100% {
+      right: -60%;
+    }
+
+    50% {
+      right: -55%;
+    }
+  }
+
   .font__interaction {
     width: 75vw;
     position: absolute;
     top: 0;
     right: -60%;
+    transition: right 0.5s ease;
+    animation: slideHint 2s ease-in infinite;
+  }
+
+  .font__interaction:hover {
+    cursor: pointer;
+  }
+
+  .font__interaction--visible {
+    right: 0;
+  }
+
+  .font__interaction--clicked {
+    animation: none;
   }
 
   .font__interaction--content {
@@ -1826,6 +1876,11 @@ h2 {
     position: absolute;
     top: 0;
     right: -60%;
+    transition: right 0.5s ease;
+  }
+
+  .font__interaction--visible {
+    right: 0;
   }
 
   .font__headline {
@@ -1973,11 +2028,11 @@ h2 {
     gap: 2rem;
   }
 
-  .turmoil__title--description-mobile{
+  .turmoil__title--description-mobile {
     display: none;
   }
 
-  .turmoil__title--description-desktop{
+  .turmoil__title--description-desktop {
     display: block;
   }
 }
@@ -2114,11 +2169,24 @@ h2 {
     left: 0;
   }
 
+  @keyframes slideHint {
+
+    0%,
+    100% {
+      right: -80%;
+    }
+
+    50% {
+      right: -75%;
+    }
+  }
+
   .font__section {
     width: 90vw;
     height: 23rem;
     margin-block-start: 3rem;
   }
+
 
   .font__content {
     margin-inline-start: 5rem;
@@ -2130,6 +2198,16 @@ h2 {
 
   .font__interaction {
     right: -80%;
+    transition: right 0.5s ease;
+    animation: slideHint 2s ease-in infinite;
+  }
+
+  .font__interaction--visible {
+    right: -20%;
+  }
+
+  .font__interaction--clicked {
+    animation: none;
   }
 
   .font__bodycopy {
@@ -2165,12 +2243,10 @@ h2 {
 }
 
 @media only screen and (min-width: 90em) {
-  .container {
+  /* .container {
     max-width: 90em;
-    /* Set a maximum width for the container */
     margin: 0 auto;
-    /* Centers the container horizontally */
-  }
+  } */
 
   .hero__wrapper {
     flex-direction: row;

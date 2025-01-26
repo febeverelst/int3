@@ -6,6 +6,10 @@ import { typeQuote, printingKeywords, bibleKeywords, turmoilPanels } from './gsa
 const flipcardContainers = document.querySelectorAll('.flipcard__container');
 const carouselItems = document.querySelectorAll('.carousel__item');
 const buttons = document.querySelectorAll('.pagination-btn');
+const textarea = document.querySelector('.font__textarea');
+const plantinButton = document.querySelector('.font__button--plantin');
+const garamondButton = document.querySelector('.font__button--garamond');
+
 
 const flipCard = (container, event) => {
     if (!event.target.closest('.flipcard__button')) {
@@ -43,6 +47,41 @@ const resetCarouselItems = () => {
     }
 };
 
+const resetButton = () => {
+    plantinButton.style.transform = 'scale(1)'; // Reset Plantin button scale
+    garamondButton.style.transform = 'scale(1)'; // Reset Garamond button scale
+};
+
+const fontInteraction = () => {
+    plantinButton.addEventListener('click', () => {
+        textarea.style.fontFamily = 'Plantin, serif';
+        resetButton();
+        plantinButton.style.transform = 'scale(1.1)';
+    });
+
+    garamondButton.addEventListener('click', () => {
+        textarea.style.fontFamily = "var(--garamond)";
+        resetButton();
+        garamondButton.style.transform = 'scale(1.1)';
+    });
+
+}
+
+const interactSlider = () => {
+    const fontInteraction = document.querySelector('.font__interaction');
+
+    // Toggle visibility and stop animation on click
+    fontInteraction.addEventListener('click', (event) => {
+        if (event.target !== fontInteraction) return;
+
+        // Stop the animation by adding the clicked class
+        fontInteraction.classList.add('font__interaction--clicked');
+
+        // Toggle the interaction panel
+        fontInteraction.classList.toggle('font__interaction--visible');
+    });
+}
+
 
 const init = () => {
     gsap.registerPlugin(ScrollTrigger);
@@ -59,6 +98,8 @@ const init = () => {
     printingKeywords();
     bibleKeywords();
     turmoilPanels();
+    fontInteraction();
+    interactSlider();
 
     console.log(gsap.version);
 }
