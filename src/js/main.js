@@ -1,7 +1,7 @@
 import { initHamburger } from './hamburger.js';
 import { updateProgressBar, countdown } from './progress.js';
 import { minigame } from './minigame.js';
-import { typeQuote, printingKeywords, bibleKeywords, turmoilPanels, stackingCards } from './gsap.js';
+import { hero, injury, fontHeadline, typeQuote, printingKeywords, bibleKeywords, investCard, turmoilPanels, stackingCards } from './gsap.js';
 
 const flipcardContainers = document.querySelectorAll('.flipcard__container');
 const carouselItems = document.querySelectorAll('.carousel__item');
@@ -90,6 +90,9 @@ const init = () => {
     carouselItems[0].classList.add('active');
     buttons[0].classList.add('active');
 
+    hero();
+    injury();
+    fontHeadline();
     initHamburger();
     updateProgressBar();
     countdown();
@@ -97,6 +100,7 @@ const init = () => {
     typeQuote();
     printingKeywords();
     bibleKeywords();
+    investCard();
     turmoilPanels();
     fontInteraction();
     interactSlider();

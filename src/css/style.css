@@ -196,10 +196,25 @@ header {
   margin-inline-start: -3rem;
 }
 
+    @keyframes bounceHero {
+      0% {
+        transform: translateY(0);
+      }
+  
+      50% {
+        transform: translateY(-10px);
+      }
+  
+      100% {
+        transform: translateY(0);
+      }
+    }
+
 .title__wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: bounceHero 6s ease-in-out infinite;
 }
 
 .accent__text {
@@ -208,6 +223,7 @@ header {
   letter-spacing: 0.28125rem;
   font-size: 0.9rem;
   font-weight: 700;
+  opacity: 0;
 }
 
 .hero__wrapper>div:nth-of-type(3)>p.accent__text {
