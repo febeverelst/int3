@@ -461,6 +461,10 @@ h2 {
   text-transform: capitalize;
 }
 
+.scaled {
+  transform: scale(1.1);
+}
+
 .stacking__cards {
   display: flex;
   flex-direction: column;

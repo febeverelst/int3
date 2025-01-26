@@ -10,7 +10,6 @@ const textarea = document.querySelector('.font__textarea');
 const plantinButton = document.querySelector('.font__button--plantin');
 const garamondButton = document.querySelector('.font__button--garamond');
 
-
 const flipCard = (container, event) => {
     if (!event.target.closest('.flipcard__button')) {
         container.querySelector('.flipcard').classList.toggle('flipped');
@@ -20,6 +19,7 @@ const flipCard = (container, event) => {
 flipcardContainers.forEach(container => {
     container.addEventListener('click', (event) => flipCard(container, event));
 });
+
 
 buttons.forEach((button, index) => {
     button.addEventListener('click', () => {
@@ -48,8 +48,9 @@ const resetCarouselItems = () => {
 };
 
 const resetButton = () => {
-    plantinButton.style.transform = 'scale(1)'; // Reset Plantin button scale
-    garamondButton.style.transform = 'scale(1)'; // Reset Garamond button scale
+    plantinButton.style.transform = 'scale(1)';
+    garamondButton.style.transform = 'scale(1)';
+
 };
 
 const fontInteraction = () => {
@@ -69,15 +70,9 @@ const fontInteraction = () => {
 
 const interactSlider = () => {
     const fontInteraction = document.querySelector('.font__interaction');
-
-    // Toggle visibility and stop animation on click
     fontInteraction.addEventListener('click', (event) => {
         if (event.target !== fontInteraction) return;
-
-        // Stop the animation by adding the clicked class
         fontInteraction.classList.add('font__interaction--clicked');
-
-        // Toggle the interaction panel
         fontInteraction.classList.toggle('font__interaction--visible');
     });
 }

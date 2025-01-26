@@ -252,6 +252,25 @@ export const turmoilPanels = () => {
 export const stackingCards = () => {
     const pinningSection = document.querySelector(".stacking__cards--section");
     const cards = document.querySelectorAll(".stacking__card");
+    const optionButtons = document.querySelectorAll('.flipcard__button'); // Select the buttons
+
+    // Function to scale buttons on click
+    const selectButton = (event) => {
+        const buttons = document.querySelectorAll('.flipcard__button');
+
+        // Remove the 'scaled' class from all buttons
+        buttons.forEach(button => {
+            button.classList.remove('scaled');
+        });
+
+        // Add the 'scaled' class to the pressed button
+        event.target.classList.add('scaled');
+    };
+
+    // Adding event listeners to all buttons for scaling effect
+    optionButtons.forEach(button => {
+        button.addEventListener('click', selectButton);
+    });
 
     if (pinningSection) {
         ScrollTrigger.create({
@@ -282,7 +301,8 @@ export const stackingCards = () => {
             y: "0%",
             opacity: 1,
             duration: 5,
-            stagger: 10
+            stagger: 10,
         }
     );
 };
+
